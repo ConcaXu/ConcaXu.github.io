@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://username.github.io/project/2024/07/18/YoloBaseNode/</loc>
+    <loc>https://concaxu.github.io/2024/07/18/YoloBaseNode/</loc>
     
     <lastmod>2024-07-18</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://username.github.io/project/2024/07/18/test/</loc>
+    <loc>https://concaxu.github.io/2024/07/18/test/</loc>
     
     <lastmod>2024-07-18</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://username.github.io/project/tags/index.html</loc>
+    <loc>https://concaxu.github.io/tags/index.html</loc>
     
     <lastmod>2024-07-18</lastmod>
     
@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://username.github.io/project/2024/04/07/hello-world/</loc>
+    <loc>https://concaxu.github.io/2024/04/07/hello-world/</loc>
     
     <lastmod>2024-07-18</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://username.github.io/project/categories/index.html</loc>
+    <loc>https://concaxu.github.io/categories/index.html</loc>
     
     <lastmod>2024-07-18</lastmod>
     
@@ -48,7 +48,7 @@
   
 
   <url>
-    <loc>https://username.github.io/project</loc>
+    <loc>https://concaxu.github.io/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -56,28 +56,28 @@
 
   
   <url>
-    <loc>https://username.github.io/project/tags/AI/</loc>
+    <loc>https://concaxu.github.io/tags/node-js/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://username.github.io/project/tags/Python/</loc>
+    <loc>https://concaxu.github.io/tags/hexo/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://username.github.io/project/tags/node-js/</loc>
+    <loc>https://concaxu.github.io/tags/AI/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://username.github.io/project/tags/hexo/</loc>
+    <loc>https://concaxu.github.io/tags/Python/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -86,7 +86,7 @@
 
   
   <url>
-    <loc>https://username.github.io/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>https://concaxu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

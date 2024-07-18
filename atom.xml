@@ -3,11 +3,11 @@
   <title>ConcaXu</title>
   
   
-  <link href="https://username.github.io/project/atom.xml" rel="self"/>
+  <link href="https://concaxu.github.io/atom.xml" rel="self"/>
   
-  <link href="https://username.github.io/project/"/>
+  <link href="https://concaxu.github.io/"/>
   <updated>2024-07-18T07:03:20.719Z</updated>
-  <id>https://username.github.io/project/</id>
+  <id>https://concaxu.github.io/</id>
   
   <author>
     <name>Conca Xu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>test</title>
-    <link href="https://username.github.io/project/2024/07/18/test/"/>
-    <id>https://username.github.io/project/2024/07/18/test/</id>
+    <link href="https://concaxu.github.io/2024/07/18/test/"/>
+    <id>https://concaxu.github.io/2024/07/18/test/</id>
     <published>2024-07-18T07:02:22.000Z</published>
     <updated>2024-07-18T07:03:20.719Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>YoloBaseNode</title>
-    <link href="https://username.github.io/project/2024/07/18/YoloBaseNode/"/>
-    <id>https://username.github.io/project/2024/07/18/YoloBaseNode/</id>
+    <link href="https://concaxu.github.io/2024/07/18/YoloBaseNode/"/>
+    <id>https://concaxu.github.io/2024/07/18/YoloBaseNode/</id>
     <published>2024-07-18T06:38:36.000Z</published>
     <updated>2024-07-18T07:03:20.721Z</updated>
     
@@ -53,19 +53,19 @@
     
     
     
-    <category term="学习笔记" scheme="https://username.github.io/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://concaxu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="AI" scheme="https://username.github.io/project/tags/AI/"/>
+    <category term="AI" scheme="https://concaxu.github.io/tags/AI/"/>
     
-    <category term="Python" scheme="https://username.github.io/project/tags/Python/"/>
+    <category term="Python" scheme="https://concaxu.github.io/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://username.github.io/project/2024/04/07/hello-world/"/>
-    <id>https://username.github.io/project/2024/04/07/hello-world/</id>
+    <link href="https://concaxu.github.io/2024/04/07/hello-world/"/>
+    <id>https://concaxu.github.io/2024/04/07/hello-world/</id>
     <published>2024-04-06T16:38:36.000Z</published>
     <updated>2024-07-18T03:08:10.312Z</updated>
     
@@ -79,12 +79,12 @@
     
     
     
-    <category term="学习笔记" scheme="https://username.github.io/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <category term="学习笔记" scheme="https://concaxu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="node.js" scheme="https://username.github.io/project/tags/node-js/"/>
+    <category term="node.js" scheme="https://concaxu.github.io/tags/node-js/"/>
     
-    <category term="hexo" scheme="https://username.github.io/project/tags/hexo/"/>
+    <category term="hexo" scheme="https://concaxu.github.io/tags/hexo/"/>
     
   </entry>
   
