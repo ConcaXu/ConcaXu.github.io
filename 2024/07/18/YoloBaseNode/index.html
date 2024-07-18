@@ -1,16 +1,16 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>YoloBaseNode | ConcaXu</title><meta name="author" content="Conca Xu"><meta name="copyright" content="Conca Xu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="​目录 Yolo的任务分类Yolo的模式类型Yolo的任务分类Train（训练）概念demofrom ultralytics import YOLO​ Load a modelmodel &#x3D; YOLO(“yolov8n.yaml”)  # build a new model from YAMLmodel &#x3D; YOLO(“yolov8n.pt”)  # load a pretra">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>YoloBaseNode | ConcaXu</title><meta name="author" content="Conca Xu"><meta name="copyright" content="Conca Xu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Yolo的任务分类Train（训练）概念 YOLOv8 中的 “训练 “模式充分利用现代硬件能力，专为高效训练物体检测模型而设计。可以训练出自己的模型  demo123456789from ultralytics import YOLO# Load a modelmodel &#x3D; YOLO(&quot;yolov8n.yaml&quot;)  # build a new model from YAM">
 <meta property="og:type" content="article">
 <meta property="og:title" content="YoloBaseNode">
 <meta property="og:url" content="https://username.github.io/project/2024/07/18/YoloBaseNode/index.html">
 <meta property="og:site_name" content="ConcaXu">
-<meta property="og:description" content="​目录 Yolo的任务分类Yolo的模式类型Yolo的任务分类Train（训练）概念demofrom ultralytics import YOLO​ Load a modelmodel &#x3D; YOLO(“yolov8n.yaml”)  # build a new model from YAMLmodel &#x3D; YOLO(“yolov8n.pt”)  # load a pretra">
+<meta property="og:description" content="Yolo的任务分类Train（训练）概念 YOLOv8 中的 “训练 “模式充分利用现代硬件能力，专为高效训练物体检测模型而设计。可以训练出自己的模型  demo123456789from ultralytics import YOLO# Load a modelmodel &#x3D; YOLO(&quot;yolov8n.yaml&quot;)  # build a new model from YAM">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4">
 <meta property="article:published_time" content="2024-07-18T06:38:36.000Z">
-<meta property="article:modified_time" content="2024-07-18T06:48:51.664Z">
+<meta property="article:modified_time" content="2024-07-18T06:52:02.829Z">
 <meta property="article:author" content="Conca Xu">
-<meta property="article:tag" content="node.js">
-<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4"><link rel="shortcut icon" href="/project/img/favicon.png"><link rel="canonical" href="https://username.github.io/project/2024/07/18/YoloBaseNode/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/project/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/project/',
@@ -57,7 +57,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-07-18 14:48:51'
+  postUpdate: '2024-07-18 14:52:02'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -155,65 +155,1339 @@
       }
       detectApple()
     })(window)</script><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/project/atom.xml" title="ConcaXu" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/project/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/project/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/project/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/1429567/pexels-photo-1429567.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1')"><nav id="nav"><span id="blog-info"><a href="/project/" title="ConcaXu"><span class="site-name">ConcaXu</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">YoloBaseNode</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-18T06:38:36.000Z" title="发表于 2024-07-18 14:38:36">2024-07-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-18T06:48:51.664Z" title="更新于 2024-07-18 14:48:51">2024-07-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="YoloBaseNode"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>​<br>目录</p>
-<h3 id="Yolo的任务分类"><a href="#Yolo的任务分类" class="headerlink" title="Yolo的任务分类"></a>Yolo的任务分类</h3><h3 id="Yolo的模式类型"><a href="#Yolo的模式类型" class="headerlink" title="Yolo的模式类型"></a>Yolo的模式类型</h3><h3 id="Yolo的任务分类-1"><a href="#Yolo的任务分类-1" class="headerlink" title="Yolo的任务分类"></a>Yolo的任务分类</h3><h3 id="Train（训练）"><a href="#Train（训练）" class="headerlink" title="Train（训练）"></a>Train（训练）</h3><h4 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h4><p>demo<br>from ultralytics import YOLO<br>​</p>
-<h1 id="Load-a-model"><a href="#Load-a-model" class="headerlink" title="Load a model"></a>Load a model</h1><p>model &#x3D; YOLO(“yolov8n.yaml”)  # build a new model from YAML<br>model &#x3D; YOLO(“yolov8n.pt”)  # load a pretrained model (recommended for training)<br>model &#x3D; YOLO(“yolov8n.yaml”).load(“yolov8n.pt”)  # build from YAML and transfer weights<br>​</p>
-<h1 id="Train-the-model"><a href="#Train-the-model" class="headerlink" title="Train the model"></a>Train the model</h1><p>results &#x3D; model.train(data&#x3D;”coco8.yaml”, epochs&#x3D;100, imgsz&#x3D;640)<br>参数<br>参数	默认值	说明<br>model	None	指定用于训练的模型文件。接受指向 .pt 预训练模型或 .yaml 配置文件。对于定义模型结构或初始化权重至关重要。<br>data	None	数据集配置文件的路径（例如 coco8.yaml).该文件包含特定于数据集的参数，包括训练数据和验证数据的路径、类名和类数。<br>epochs	100	训练历元总数。每个历元代表对整个数据集进行一次完整的训练。调整该值会影响训练时间和模型性能。<br>time	None	最长训练时间（小时）。如果设置了该值，则会覆盖 epochs 参数，允许训练在指定的持续时间后自动停止。对于时间有限的训练场景非常有用。<br>patience	100	在验证指标没有改善的情况下，提前停止训练所需的历元数。当性能趋于平稳时停止训练，有助于防止过度拟合。<br>batch	16	训练的批量大小，表示在更新模型内部参数之前要处理多少张图像。自动批处理 (batch&#x3D;-1)会根据 GPU 内存可用性动态调整批处理大小。<br>imgsz	640	用于训练的目标图像尺寸。所有图像在输入模型前都会被调整到这一尺寸。影响模型精度和计算复杂度。<br>save	True	可保存训练检查点和最终模型权重。这对恢复训练或模型部署非常有用。<br>save_period	-1	保存模型检查点的频率，以 epochs 为单位。值为-1 时将禁用此功能。该功能适用于在长时间训练过程中保存临时模型。<br>cache	False	在内存中缓存数据集图像 (True&#x2F;ram）、磁盘 (disk），或禁用它 (False).通过减少磁盘 I&#x2F;O 提高训练速度，但代价是增加内存使用量。<br>device	None	指定用于训练的计算设备：单个 GPU (device&#x3D;0）、多个 GPU (device&#x3D;0,1)、CPU (device&#x3D;cpu)，或苹果芯片的 MPS (device&#x3D;mps).<br>workers	8	加载数据的工作线程数（每 RANK 多 GPU 训练）。影响数据预处理和输入模型的速度，尤其适用于多 GPU 设置。<br>project	None	保存训练结果的项目目录名称。允许有组织地存储不同的实验。<br>name	None	训练运行的名称。用于在项目文件夹内创建一个子目录，用于存储训练日志和输出结果。<br>exist_ok	False	如果为 True，则允许覆盖现有的项目&#x2F;名称目录。这对迭代实验非常有用，无需手动清除之前的输出。<br>pretrained	True	决定是否从预处理模型开始训练。可以是布尔值，也可以是加载权重的特定模型的字符串路径。提高训练效率和模型性能。<br>optimizer	‘auto’	为培训选择优化器。选项包括 SGD, Adam, AdamW, NAdam, RAdam, RMSProp 等，或 auto 用于根据模型配置进行自动选择。影响收敛速度和稳定性<br>verbose	False	在训练过程中启用冗长输出，提供详细日志和进度更新。有助于调试和密切监控培训过程。<br>seed	0	为训练设置随机种子，确保在相同配置下运行的结果具有可重复性。<br>deterministic	True	强制使用确定性算法，确保可重复性，但由于对非确定性算法的限制，可能会影响性能和速度。<br>single_cls	False	在训练过程中将多类数据集中的所有类别视为单一类别。适用于二元分类任务，或侧重于对象的存在而非分类。<br>rect	False	可进行矩形训练，优化批次组成以减少填充。这可以提高效率和速度，但可能会影响模型的准确性。<br>cos_lr	False	利用余弦学习率调度器，根据历时的余弦曲线调整学习率。这有助于管理学习率，实现更好的收敛。<br>close_mosaic	10	在训练完成前禁用最后 N 个历元的马赛克数据增强以稳定训练。设置为 0 则禁用此功能。<br>resume	False	从上次保存的检查点恢复训练。自动加载模型权重、优化器状态和历时计数，无缝继续训练。<br>amp	True	启用自动混合精度 (AMP) 训练，可减少内存使用量并加快训练速度，同时将对精度的影响降至最低。<br>fraction	1.0	指定用于训练的数据集的部分。允许在完整数据集的子集上进行训练，这对实验或资源有限的情况非常有用。<br>profile	False	在训练过程中，可对ONNX 和TensorRT 速度进行剖析，有助于优化模型部署。<br>freeze	None	冻结模型的前 N 层或按索引指定的层，从而减少可训练参数的数量。这对微调或迁移学习非常有用。<br>lr0	0.01	初始学习率（即 SGD&#x3D;1E-2, Adam&#x3D;1E-3) .调整这个值对优化过程至关重要，会影响模型权重的更新速度。<br>lrf	0.01	最终学习率占初始学习率的百分比 &#x3D; (lr0 * lrf)，与调度程序结合使用，随着时间的推移调整学习率。<br>momentum	0.937	用于 SGD 的动量因子，或用于 Adam 优化器的 beta1，用于将过去的梯度纳入当前更新。<br>weight_decay	0.0005	L2 正则化项，对大权重进行惩罚，以防止过度拟合。<br>warmup_epochs	3.0	学习率预热的历元数，学习率从低值逐渐增加到初始学习率，以在早期稳定训练。<br>warmup_momentum	0.8	热身阶段的初始动力，在热身期间逐渐调整到设定动力。<br>warmup_bias_lr	0.1	热身阶段的偏置参数学习率，有助于稳定初始历元的模型训练。<br>box	7.5	损失函数中边框损失部分的权重，影响对准确预测边框坐标的重视程度。<br>cls	0.5	分类损失在总损失函数中的权重，影响正确分类预测相对于其他部分的重要性。<br>dfl	1.5	分布焦点损失权重，在某些YOLO 版本中用于精细分类。<br>pose	12.0	姿态损失在姿态估计模型中的权重，影响着准确预测姿态关键点的重点。<br>kobj	2.0	姿态估计模型中关键点对象性损失的权重，平衡检测可信度与姿态精度。<br>label_smoothing	0.0	应用标签平滑，将硬标签软化为目标标签和标签均匀分布的混合标签，可以提高泛化效果。<br>nbs	64	用于损耗正常化的标称批量大小。<br>overlap_mask	True	决定在训练过程中分割掩码是否应该重叠，适用于实例分割任务。<br>mask_ratio	4	分割掩码的下采样率，影响训练时使用的掩码分辨率。<br>dropout	0.0	分类任务中正则化的丢弃率，通过在训练过程中随机省略单元来防止过拟合。<br>val	True	可在训练过程中进行验证，以便在单独的数据集上对模型性能进行定期评估。<br>plots	False	生成并保存训练和验证指标图以及预测示例图，以便直观地了解模型性能和学习进度。<br>​</p>
-<p>超参数<br>参数名	类型	默认值	范围	说明<br>hsv_h	float	0.015	0.0 - 1.0	通过色轮的一部分来调整图像的色调，从而引入色彩的可变性。帮助模型在不同的光照条件下通用。<br>hsv_s	float	0.7	0.0 - 1.0	改变图像饱和度的一部分，影响色彩的强度。可用于模拟不同的环境条件。<br>hsv_v	float	0.4	0.0 - 1.0	将图像的数值（亮度）修改一部分，帮助模型在不同的光照条件下表现良好。<br>degrees	float	0.0	-180 - +180	在指定的度数范围内随机旋转图像，提高模型识别不同方向物体的能力。<br>translate	float	0.1	0.0 - 1.0	以图像大小的一小部分水平和垂直平移图像，帮助学习检测部分可见的物体。<br>scale	float	0.5	&gt;&#x3D;0.0	通过增益因子缩放图像，模拟物体与摄像机的不同距离。<br>shear	float	0.0	-180 - +180	按指定角度剪切图像，模拟从不同角度观察物体的效果。<br>perspective	float	0.0	0.0 - 0.001	对图像进行随机透视变换，增强模型理解三维空间中物体的能力。<br>flipud	float	0.0	0.0 - 1.0	以指定的概率将图像翻转过来，在不影响物体特征的情况下增加数据的可变性。<br>fliplr	float	0.5	0.0 - 1.0	以指定的概率将图像从左到右翻转，这对学习对称物体和增加数据集多样性非常有用。<br>bgr	float	0.0	0.0 - 1.0	以指定的概率将图像通道从 RGB 翻转到 BGR，用于提高对错误通道排序的稳健性。<br>mosaic	float	1.0	0.0 - 1.0	将四幅训练图像合成一幅，模拟不同的场景构成和物体互动。对复杂场景的理解非常有效。<br>mixup	float	0.0	0.0 - 1.0	混合两幅图像及其标签，创建合成图像。通过引入标签噪声和视觉变化，增强模型的泛化能力。<br>copy_paste	float	0.0	0.0 - 1.0	从一幅图像中复制物体并粘贴到另一幅图像上，用于增加物体实例和学习物体遮挡。<br>auto_augment	str	randaugment	-	自动应用预定义的增强策略 (randaugment, autoaugment, augmix)，通过丰富视觉特征来优化分类任务。<br>erasing	float	0.4	0.0 - 0.9	在分类训练过程中随机擦除部分图像，鼓励模型将识别重点放在不明显的特征上。<br>crop_fraction	float	1.0	0.1 - 1.0	将分类图像裁剪为其大小的一小部分，以突出中心特征并适应对象比例，减少背景干扰。<br>​</p>
-<p>常用参数<br>epoch、 imgsz、 save、 device、 workers<br>Val（评估）<br>概念</p>
-<p>demo<br>from ultralytics import YOLO<br>​</p>
-<h1 id="Load-a-model-1"><a href="#Load-a-model-1" class="headerlink" title="Load a model"></a>Load a model</h1><p>model &#x3D; YOLO(“yolov8n.pt”)  # load an official model<br>model &#x3D; YOLO(“path&#x2F;to&#x2F;best.pt”)  # load a custom model<br>​</p>
-<h1 id="Validate-the-model"><a href="#Validate-the-model" class="headerlink" title="Validate the model"></a>Validate the model</h1><p>metrics &#x3D; model.val()  # no arguments needed, dataset and settings remembered<br>metrics.box.map  # map50-95<br>metrics.box.map50  # map50<br>metrics.box.map75  # map75<br>metrics.box.maps  # a list contains map50-95 of each category<br>参数&#x2F;超参数<br>参数	类型	默认值	说明<br>data	str	None	指定数据集配置文件的路径（如 coco8.yaml).该文件包括验证数据的路径、类名和类数。<br>imgsz	int	640	定义输入图像的尺寸。所有图像在处理前都会调整到这一尺寸。<br>batch	int	16	设置每批图像的数量。使用 -1 的自动批处理功能，可根据 GPU 内存可用性自动调整。<br>save_json	bool	False	如果 True此外，还可将结果保存到 JSON 文件中，以便进一步分析或与其他工具集成。<br>save_hybrid	bool	False	如果 True，保存混合版本的标签，将原始注释与额外的模型预测相结合。<br>conf	float	0.001	设置检测的最小置信度阈值。置信度低于此阈值的检测将被丢弃。<br>iou	float	0.6	设置非最大抑制 (NMS) 的交叉重叠 (IoU) 阈值。有助于减少重复检测。<br>max_det	int	300	限制每幅图像的最大检测次数。在密度较高的场景中非常有用，可以防止检测次数过多。<br>half	bool	True	可进行半精度（FP16）计算，减少内存使用量，在提高速度的同时，将对精度的影响降至最低。<br>device	str	None	指定验证设备 (cpu, cuda:0等）。可灵活利用 CPU 或 GPU 资源。<br>dnn	bool	False	如果 True它使用 OpenCV DNN 模块进行ONNX 模型推断，为PyTorch 推断方法提供了一种替代方法。<br>plots	bool	False	当设置为 True此外，它还能生成并保存预测结果与地面实况的对比图，以便对模型的性能进行可视化评估。<br>rect	bool	False	如果 True该软件使用矩形推理进行批处理，减少了填充，可能会提高速度和效率。<br>split	str	val	确定用于验证的数据集分割 (val, test或 train).可灵活选择数据段进行性能评估。<br>​</p>
-<p>常用参数<br>batch 、 conf、 IoU、 half<br>Predict(预测)<br>demo<br>from ultralytics import YOLO<br>​</p>
-<h1 id="Load-a-pretrained-YOLOv8n-model"><a href="#Load-a-pretrained-YOLOv8n-model" class="headerlink" title="Load a pretrained YOLOv8n model"></a>Load a pretrained YOLOv8n model</h1><p>model &#x3D; YOLO(“yolov8n.pt”)<br>​</p>
-<h1 id="Run-inference-on-‘bus-jpg’-with-arguments"><a href="#Run-inference-on-‘bus-jpg’-with-arguments" class="headerlink" title="Run inference on ‘bus.jpg’ with arguments"></a>Run inference on ‘bus.jpg’ with arguments</h1><p>result &#x3D; model.predict(“bus.jpg”, save&#x3D;True, imgsz&#x3D;320, conf&#x3D;0.5)</p>
-<h1 id="Value-of-result"><a href="#Value-of-result" class="headerlink" title="Value of result"></a>Value of result</h1><p>for result in results:<br>    print(“图像原始大小:”, result.orig_shape)<br>    data_numpy &#x3D; result.boxes.data.cpu().numpy()<br>    for data in data_numpy:<br>        print(“data”, data)<br>        print(“左上角X轴坐标:”, data[0])<br>        print(“左上角Y轴坐标:”, data[1])<br>        print(“右下角X轴坐标:”, data[2])<br>        print(“右下角Y轴坐标:”, data[3])<br>        print(“置—信—度:”, data[4])<br>        print(“检测到的类有:”,  data[5])</p>
-<p>参数<br>论据	类型	默认值	说明<br>source	str	‘ultralytics&#x2F;assets’	指定推理的数据源。可以是图像路径、视频文件、目录、URL 或用于实时馈送的设备 ID。支持多种格式和来源，可灵活应用于不同类型的输入。<br>conf	float	0.25	设置检测的最小置信度阈值。如果检测到的对象置信度低于此阈值，则将不予考虑。调整该值有助于减少误报。<br>iou	float	0.7	非最大抑制 (NMS) 的交叉重叠 (IoU) 阈值。较低的数值可以消除重叠的方框，从而减少检测次数，这对减少重复检测非常有用。<br>imgsz	int or tuple	640	定义用于推理的图像大小。可以是一个整数 640 或一个（高、宽）元组。适当调整大小可以提高检测精度和处理速度。<br>half	bool	False	启用半精度（FP16）推理，可加快支持的 GPU 上的模型推理速度，同时将对精度的影响降至最低。<br>device	str	None	指定用于推理的设备（例如：……）、 cpu, cuda:0 或 0).允许用户选择 CPU、特定 GPU 或其他计算设备来执行模型。<br>max_det	int	300	每幅图像允许的最大检测次数。限制模型在单次推理中可检测到的物体总数，防止在密集场景中产生过多输出。<br>vid_stride	int	1	视频输入的帧间距。允许跳过视频中的帧，以加快处理速度，但会牺牲时间分辨率。值为 1 时处理每一帧，值越大跳帧越多。<br>stream_buffer	bool	False	确定在处理视频流时是否对所有帧进行缓冲 (True)，或者模型是否应该返回最近的帧 (False).适用于实时应用。<br>visualize	bool	False	在推理过程中激活模型特征的可视化，从而深入了解模型 “看到 “了什么。这对调试和模型解释非常有用。<br>augment	bool	False	可对预测进行测试时间增强（TTA），从而在牺牲推理速度的情况下提高检测的鲁棒性。<br>agnostic_nms	bool	False	启用与类别无关的非最大抑制 (NMS)，可合并不同类别的重叠方框。这在多类检测场景中非常有用，因为在这种场景中，类的重叠很常见。<br>classes	list[int]	None	根据一组类别 ID 过滤预测结果。只返回属于指定类别的检测结果。在多类检测任务中，该功能有助于集中检测相关对象。<br>retina_masks	bool	False	如果模型中存在高分辨率的分割掩膜，则使用高分辨率的分割掩膜。这可以提高分割任务的掩膜质量，提供更精细的细节。<br>embed	list[int]	None	指定从中提取特征向量或嵌入的层。这对聚类或相似性搜索等下游任务非常有用。<br>​</p>
-<p>常用参数<br>conf、 IoU、 half、 imgsz、 device、 classes、<br>结果参数<br>属性	类型	说明<br>orig_img	numpy.ndarray	原始图像的 numpy 数组。<br>orig_shape	tuple	原始图像的形状，格式为（高、宽）。<br>boxes	Boxes, optional	包含检测边界框的方框对象。<br>masks	Masks, optional	包含检测掩码的掩码对象。<br>probs	Probs, optional	Probs 对象，包含分类任务中每个类别的概率。<br>keypoints	Keypoints, optional	关键点对象，包含每个对象的检测关键点。<br>obb	OBB, optional	包含定向包围盒的 OBB 对象。<br>speed	dict	每幅图像的预处理、推理和后处理速度字典，单位为毫秒。<br>names	dict	类名字典。<br>path	str	图像文件的路径。<br>​</p>
-<p>results支持方法<br>方法	返回类型	说明<br>update()	None	更新结果对象的方框、掩码和 probs 属性。<br>cpu()	Results	返回包含 CPU 内存中所有张量的结果对象副本。<br>numpy()	Results	返回结果对象的副本，其中所有张量均为 numpy 数组。<br>cuda()	Results	返回包含 GPU 内存中所有张量的 Results 对象副本。<br>to()	Results	返回带有指定设备和 dtype 上张量的 Results 对象副本。<br>new()	Results	返回一个具有相同图像、路径和名称的新结果对象。<br>plot()	numpy.ndarray	绘制检测结果。返回注释图像的 numpy 数组。<br>show()	None	在屏幕上显示带注释的结果。<br>save()	None	将注释结果保存到文件中。<br>verbose()	str	返回每个任务的日志字符串。<br>save_txt()	None	将预测结果保存到 txt 文件中。<br>save_crop()	None	将裁剪后的预测保存到 save_dir&#x2F;cls&#x2F;file_name.jpg.<br>tojson()	str	将对象转换为 JSON 格式。<br>​</p>
-<p>Export（导出）</p>
-<p>demo<br>from ultralytics import YOLO<br>​</p>
-<h1 id="Load-a-model-2"><a href="#Load-a-model-2" class="headerlink" title="Load a model"></a>Load a model</h1><p>model &#x3D; YOLO(“yolov8n.pt”)  # load an official model<br>model &#x3D; YOLO(“path&#x2F;to&#x2F;best.pt”)  # load a custom trained model<br>​</p>
-<h1 id="Export-the-model"><a href="#Export-the-model" class="headerlink" title="Export the model"></a>Export the model</h1><p>model.export(format&#x3D;”onnx”)<br>参数<br>论据	类型	默认值	说明<br>format	str	‘torchscript’	导出模型的目标格式，例如 ‘onnx’, ‘torchscript’, ‘tensorflow’或其他，定义与各种部署环境的兼容性。<br>imgsz	int 或 tuple	640	模型输入所需的图像尺寸。对于正方形图像，可以是一个整数，或者是一个元组 (height, width) 了解具体尺寸。<br>keras	bool	False	启用导出为 Keras 格式的TensorFlow SavedModel ，提供与TensorFlow serving 和 API 的兼容性。<br>optimize	bool	False	在导出到TorchScript 时，应用针对移动设备的优化，可能会减小模型大小并提高性能。<br>half	bool	False	启用 FP16（半精度）量化，在支持的硬件上减小模型大小并可能加快推理速度。<br>int8	bool	False	激活 INT8 量化，进一步压缩模型并加快推理速度，同时将精度损失降至最低，主要用于边缘设备。<br>dynamic	bool	False	允许ONNX 和TensorRT 导出动态输入尺寸，提高了处理不同图像尺寸的灵活性。<br>simplify	bool	False	简化了ONNX 导出的模型图，可能会提高性能和兼容性。<br>opset	int	None	指定ONNX opset 版本，以便与不同的ONNX 解析器和运行时兼容。如果未设置，则使用最新的支持版本。<br>workspace	float	4.0	为TensorRT 优化设置最大工作区大小（GiB），以平衡内存使用和性能。<br>nms	bool	False	在CoreML 导出中添加非最大值抑制 (NMS)，这对精确高效的检测后处理至关重要。<br>batch	int	1	指定导出模型的批量推理大小，或导出模型将同时处理的图像的最大数量。 predict 模式。<br>​</p>
-<p>支持导出格式<br>​</p>
-<p>格式	format 论据	模型	元数据	论据<br>PyTorch	-	yolov8n.pt	✅	-<br>TorchScript	torchscript	yolov8n.torchscript	✅	imgsz, optimize, batch<br>ONNX	onnx	yolov8n.onnx	✅	imgsz, half, dynamic, simplify, opset, batch<br>OpenVINO	openvino	yolov8n_openvino_model&#x2F;	✅	imgsz, half, int8, batch<br>TensorRT	engine	yolov8n.engine	✅	imgsz, half, dynamic, simplify, workspace, int8, batch<br>CoreML	coreml	yolov8n.mlpackage	✅	imgsz, half, int8, nms, batch<br>TF SavedModel	saved_model	yolov8n_saved_model&#x2F;	✅	imgsz, keras, int8, batch<br>TF GraphDef	pb	yolov8n.pb	❌	imgsz, batch<br>TF 轻型	tflite	yolov8n.tflite	✅	imgsz, half, int8, batch<br>TF 边缘TPU	edgetpu	yolov8n_edgetpu.tflite	✅	imgsz, batch<br>TF.js	tfjs	yolov8n_web_model&#x2F;	✅	imgsz, half, int8, batch<br>PaddlePaddle	paddle	yolov8n_paddle_model&#x2F;	✅	imgsz, batch<br>NCNN	ncnn	yolov8n_ncnn_model&#x2F;	✅	imgsz, half, batch<br>​</p>
-<p>Yolo的模式类型<br>Detect（检测）</p>
-<p>模型<br>​</p>
-<p>模型	尺寸<br>（像素）	mAPval<br>50-95	速度<br>CPUONNX<br>(ms)	速度<br>A100 TensorRT<br>（毫秒）	params<br>(M)	FLOPs<br>(B)<br>YOLOv8n	640	37.3	80.4	0.99	3.2	8.7<br>YOLOv8s	640	44.9	128.4	1.20	11.2	28.6<br>YOLOv8m	640	50.2	234.7	1.83	25.9	78.9<br>YOLOv8l	640	52.9	375.2	2.39	43.7	165.2<br>YOLOv8x	640	53.9	479.1	3.53	68.2	257.8<br>​</p>
-<p>Segment（分割）</p>
-<p>模型<br>​</p>
-<p>模型	尺寸<br>（像素）	mAPbox<br>50-95	mAPmask<br>50-95	速度<br>CPUONNX<br>(ms)	速度<br>A100 TensorRT<br>（毫秒）	params<br>(M)	FLOPs<br>(B)<br>YOLOv8n-seg	640	36.7	30.5	96.1	1.21	3.4	12.6<br>YOLOv8s-seg	640	44.6	36.8	155.7	1.47	11.8	42.6<br>YOLOv8m-seg	640	49.9	40.8	317.0	2.18	27.3	110.2<br>YOLOv8l-seg	640	52.3	42.6	572.4	2.79	46.0	220.5<br>YOLOv8x-seg	640	53.4	43.4	712.1	4.02	71.8	344.1<br>​</p>
-<p>Classify（分类）</p>
-<p>模型<br>​</p>
-<p>模型	尺寸<br>（像素）	acc<br>top1	acc<br>top5	速度<br>CPUONNX<br>(ms)	速度<br>A100 TensorRT<br>（毫秒）	params<br>(M)	FLOPs<br>(B) at 640<br>YOLOv8n-cls	224	69.0	88.3	12.9	0.31	2.7	4.3<br>YOLOv8s-cls	224	73.8	91.7	23.4	0.35	6.4	13.5<br>YOLOv8m-cls	224	76.8	93.5	85.4	0.62	17.0	42.7<br>YOLOv8l-cls	224	76.8	93.5	163.0	0.87	37.5	99.7<br>YOLOv8x-cls	224	79.0	94.6	232.0	1.01	57.4	154.8<br>​</p>
-<p>Pose（姿态）</p>
-<p>模型<br>​</p>
-<p>模型	尺寸<br>（像素）<br>50-95	mAPpose<br>50	速度<br>CPUONNX<br>(ms)	速度<br>A100 TensorRT<br>（毫秒）	params<br>(M)	FLOPs<br>(B)<br>YOLOv8n-姿势	640	50.4	80.1	131.8	1.18	3.3	9.2<br>YOLOv8s-姿势	640	60.0	86.2	233.2	1.42	11.6	30.2<br>YOLOv8m-姿势	640	65.0	88.8	456.3	2.00	26.4	81.0<br>YOLOv8l-姿势	640	67.6	90.0	784.5	2.59	44.4	168.6<br>YOLOv8x-姿势	640	69.2	90.2	1607.1	3.73	69.4	263.2<br>YOLOv8x-pose-p6	1280	71.6	91.2	4088.7	10.04	99.1	1066.4<br>​</p>
-<p>OBB（定向检测）</p>
-<p>模型<br>模型	尺寸<br>（像素）	mAPtest<br>50	速度<br>CPUONNX<br>(ms)	速度<br>A100 TensorRT<br>（毫秒）	params<br>(M)	FLOPs<br>(B)<br>YOLOv8n-obb	1024	78.0	204.77	3.57	3.1	23.3<br>YOLOv8s-obb	1024	79.5	424.88	4.07	11.4	76.3<br>YOLOv8m-obb	1024	80.5	763.48	7.61	26.4	208.6<br>YOLOv8l-obb	1024	80.7	1278.42	11.83	44.5	433.8<br>YOLOv8x-obb	1024	81.36	1759.10	13.23	69.5	676.7<br>​</p>
-<p>个人经验<br>如何使用Yolov8</p>
-<p>pip install ultralytics<br>pip3 install torch torchvision torchaudio –index-url <a target="_blank" rel="noopener" href="https://download.pytorch.org/whl/cu118">https://download.pytorch.org/whl/cu118</a> (根据自己电脑配置决定)</p>
-<p>nvidia-smi 查看自己电脑支持的最高cuda版本，建议安装11.8比较稳定<br>然后安装对应支持的cuda，cudnn<br>参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/jhsignal/article/details/111401628">https://blog.csdn.net/jhsignal/article/details/111401628</a></p>
-<p>import torch<br>print(torch.cuda.is_available())<br>x &#x3D; torch.rand(5, 5).cuda()<br>print(x)<br>训练结果参数理解</p>
-<p>训练自己的数据集</p>
-<p>path: D:\PythonProject\ultralytics\datasets\myselfData # dataset中的文件夹路径<br>train: images&#x2F;train2017 # train images 训练的图片路径<br>val: images&#x2F;train2017 # val images 验证的图片路径<br>test: images&#x2F;train2017 # test images 测试的图片路径</p>
-<h1 id="Classes"><a href="#Classes" class="headerlink" title="Classes"></a>Classes</h1><p>names:<br>0: Bread<br>1: Paper<br>2: People<br>启动训练函数<br>from ultralytics import YOLO</p>
-<p>def train():</p>
-<h1 id="确保配置文件是正确的，通常是与预训练模型相同的配置文件"><a href="#确保配置文件是正确的，通常是与预训练模型相同的配置文件" class="headerlink" title="确保配置文件是正确的，通常是与预训练模型相同的配置文件"></a>确保配置文件是正确的，通常是与预训练模型相同的配置文件</h1><p>model &#x3D; YOLO(‘yolov8m.yaml’).load(‘yolov8n.pt’)</p>
-<pre><code># 开始训练模型
-results = model.train(data=&#39;datasets/myselfData/myselfData.yaml&#39;, epochs=300, batch=16, device=0, workers=8, imgsz=640) 
-return results
-</code></pre>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>results &#x3D; train()<br>预测函数<br>import os</p>
-<p>import cv2<br>import numpy as np<br>from ultralytics import YOLO</p>
-<p>model &#x3D; YOLO(‘..&#x2F;yolopt&#x2F;best.pt’)<br>folder_path &#x3D; “D:&#x2F;PythonProject&#x2F;xxx” #可以使用绝对路径&#x2F;相对路径，文件夹图片都可以放<br>results &#x3D; model.predict(folder_path, save&#x3D;True, imgsz&#x3D;320, conf&#x3D;0.5, device&#x3D;’0’, half&#x3D;True)<br>for result in results:<br>data_numpy &#x3D; result.boxes.data.cpu().numpy()<br>for data in data_numpy:<br>print(“左上角X轴坐标:”, data[0])<br>print(“左上角Y轴坐标:”, data[1])<br>print(“右下角X轴坐标:”, data[2])<br>print(“右下角Y轴坐标:”, data[3])<br>print(“置—信—度:”, data[4])<br>print(“检测到的类有:”, [int(data[5])])<br>验证函数<br>from ultralytics import YOLO</p>
-<p>def val():<br>model &#x3D; YOLO(“..&#x2F;bestX.pt”)<br>validation_results &#x3D; model.val(data&#x3D;”datasets&#x2F;myselfData&#x2F;myselfData.yaml”, imgsz&#x3D;640,<br>batch&#x3D;64, conf&#x3D;0.5, iou&#x3D;0.6, device&#x3D;”0”)</p>
-<p>if <strong>name</strong> &#x3D;&#x3D; ‘<strong>main</strong>‘:<br>val()<br>模型转换（Pt转Onnx）<br>import cv2<br>import torch</p>
-<p>from tensor_rt.main import YOLOv8<br>from ultralytics import YOLO</p>
-<h1 id="Pt转换Onnx模型"><a href="#Pt转换Onnx模型" class="headerlink" title="# Pt转换Onnx模型"></a># Pt转换Onnx模型</h1><p>device &#x3D; “cuda:0” if torch.cuda.is_available() else “cpu”<br>onnx_model &#x3D; YOLO(“DarkPointX.onnx”)<br>results &#x3D; onnx_model(“202404201048220.jpg”)<br>print(results)<br> 模型（Pt转Engine）<br>from ultralytics import YOLO<br>import torch</p>
-<h1 id="检查GPU是否可用，并设置为默认设备"><a href="#检查GPU是否可用，并设置为默认设备" class="headerlink" title="检查GPU是否可用，并设置为默认设备"></a>检查GPU是否可用，并设置为默认设备</h1><p>device &#x3D; ‘cuda’ if torch.cuda.is_available() else ‘cpu’<br>print(f”Using device: {device}”)</p>
-<h1 id="载入模型并转移到设备"><a href="#载入模型并转移到设备" class="headerlink" title="载入模型并转移到设备"></a>载入模型并转移到设备</h1><p>model &#x3D; YOLO(“DarkPointX.pt”).to(device)<br>model.export(<br>format&#x3D;”engine”,<br>dynamic&#x3D;True,<br>batch&#x3D;32,<br>workspace&#x3D;4,<br>half&#x3D;True,<br>data&#x3D;”bread.yaml”,<br>)<br>print(“Done”)</p>
-<h1 id="results-self-model-predict-image-save-False-imgsz-640-conf-self-conf-device-’0’-half-True"><a href="#results-self-model-predict-image-save-False-imgsz-640-conf-self-conf-device-’0’-half-True" class="headerlink" title="results &#x3D; self.model.predict(image, save&#x3D;False, imgsz&#x3D;640, conf&#x3D;self.conf, device&#x3D;’0’, half&#x3D;True)"></a>results &#x3D; self.model.predict(image, save&#x3D;False, imgsz&#x3D;640, conf&#x3D;self.conf, device&#x3D;’0’, half&#x3D;True)</h1><h1 id="Load-the-exported-TensorRT-INT8-model"><a href="#Load-the-exported-TensorRT-INT8-model" class="headerlink" title="Load the exported TensorRT INT8 model"></a>Load the exported TensorRT INT8 model</h1><p>model &#x3D; YOLO(“DarkPointX.engine”)</p>
-<h1 id="Run-inference"><a href="#Run-inference" class="headerlink" title="Run inference"></a>Run inference</h1><p>result &#x3D; model.predict(“<a target="_blank" rel="noopener" href="https://ultralytics.com/images/bus.jpg">https://ultralytics.com/images/bus.jpg</a>“)</p>
-<p>​</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://username.github.io/project">Conca Xu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://username.github.io/project/2024/07/18/YoloBaseNode/">https://username.github.io/project/2024/07/18/YoloBaseNode/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://username.github.io/project" target="_blank">ConcaXu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/project/tags/node-js/">node.js</a><a class="post-meta__tags" href="/project/tags/hexo/">hexo</a></div><div class="post_share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/project/2024/04/07/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/project/2024/04/07/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-04-07</div><div class="title">Hello World</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="this.onerror=null;this.src='/project/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Conca Xu</div><div class="author-info__description">This is Conca Xu</div></div><div class="card-info-data site-data is-center"><a href="/project/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/project/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/project/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ConcaXu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Yolo%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">Yolo的任务分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yolo%E7%9A%84%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">Yolo的模式类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Yolo%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E7%B1%BB-1"><span class="toc-number">3.</span> <span class="toc-text">Yolo的任务分类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Train%EF%BC%88%E8%AE%AD%E7%BB%83%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">Train（训练）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">4.1.</span> <span class="toc-text">概念</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Load-a-model"><span class="toc-number"></span> <span class="toc-text">Load a model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Train-the-model"><span class="toc-number"></span> <span class="toc-text">Train the model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Load-a-model-1"><span class="toc-number"></span> <span class="toc-text">Load a model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Validate-the-model"><span class="toc-number"></span> <span class="toc-text">Validate the model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Load-a-pretrained-YOLOv8n-model"><span class="toc-number"></span> <span class="toc-text">Load a pretrained YOLOv8n model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Run-inference-on-%E2%80%98bus-jpg%E2%80%99-with-arguments"><span class="toc-number"></span> <span class="toc-text">Run inference on ‘bus.jpg’ with arguments</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Value-of-result"><span class="toc-number"></span> <span class="toc-text">Value of result</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Load-a-model-2"><span class="toc-number"></span> <span class="toc-text">Load a model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Export-the-model"><span class="toc-number"></span> <span class="toc-text">Export the model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Classes"><span class="toc-number"></span> <span class="toc-text">Classes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A1%AE%E4%BF%9D%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E6%98%AF%E6%AD%A3%E7%A1%AE%E7%9A%84%EF%BC%8C%E9%80%9A%E5%B8%B8%E6%98%AF%E4%B8%8E%E9%A2%84%E8%AE%AD%E7%BB%83%E6%A8%A1%E5%9E%8B%E7%9B%B8%E5%90%8C%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6"><span class="toc-number"></span> <span class="toc-text">确保配置文件是正确的，通常是与预训练模型相同的配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pt%E8%BD%AC%E6%8D%A2Onnx%E6%A8%A1%E5%9E%8B"><span class="toc-number"></span> <span class="toc-text"># Pt转换Onnx模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A3%80%E6%9F%A5GPU%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8%EF%BC%8C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E4%B8%BA%E9%BB%98%E8%AE%A4%E8%AE%BE%E5%A4%87"><span class="toc-number"></span> <span class="toc-text">检查GPU是否可用，并设置为默认设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%BD%E5%85%A5%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%BD%AC%E7%A7%BB%E5%88%B0%E8%AE%BE%E5%A4%87"><span class="toc-number"></span> <span class="toc-text">载入模型并转移到设备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#results-self-model-predict-image-save-False-imgsz-640-conf-self-conf-device-%E2%80%990%E2%80%99-half-True"><span class="toc-number"></span> <span class="toc-text">results &#x3D; self.model.predict(image, save&#x3D;False, imgsz&#x3D;640, conf&#x3D;self.conf, device&#x3D;’0’, half&#x3D;True)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Load-the-exported-TensorRT-INT8-model"><span class="toc-number"></span> <span class="toc-text">Load the exported TensorRT INT8 model</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Run-inference"><span class="toc-number"></span> <span class="toc-text">Run inference</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2024/07/18/YoloBaseNode/" title="YoloBaseNode">YoloBaseNode</a><time datetime="2024-07-18T06:38:36.000Z" title="发表于 2024-07-18 14:38:36">2024-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2024/04/07/hello-world/" title="Hello World">Hello World</a><time datetime="2024-04-06T16:38:36.000Z" title="发表于 2024-04-07 00:38:36">2024-04-07</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Conca Xu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/project/js/utils.js?v=4.13.0"></script><script src="/project/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/project/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/project/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/project/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://images.pexels.com/photos/1429567/pexels-photo-1429567.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1260&amp;h=750&amp;dpr=1')"><nav id="nav"><span id="blog-info"><a href="/project/" title="ConcaXu"><span class="site-name">ConcaXu</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">YoloBaseNode</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-18T06:38:36.000Z" title="发表于 2024-07-18 14:38:36">2024-07-18</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-18T06:52:02.829Z" title="更新于 2024-07-18 14:52:02">2024-07-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="YoloBaseNode"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Yolo的任务分类"><a href="#Yolo的任务分类" class="headerlink" title="Yolo的任务分类"></a>Yolo的任务分类</h1><h2 id="Train（训练）"><a href="#Train（训练）" class="headerlink" title="Train（训练）"></a>Train（训练）</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>YOLOv8 中的 “训练 “模式充分利用现代硬件能力，专为高效训练物体检测模型而设计。可以训练出自己的模型</p>
+</blockquote>
+<h3 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.yaml&quot;</span>)  <span class="comment"># build a new model from YAML</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># load a pretrained model (recommended for training)</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.yaml&quot;</span>).load(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># build from YAML and transfer weights</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Train the model</span></span><br><span class="line">results = model.train(data=<span class="string">&quot;coco8.yaml&quot;</span>, epochs=<span class="number">100</span>, imgsz=<span class="number">640</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">model</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定用于训练的模型文件。接受指向 <code data-wg-notranslate="">.pt</code> 预训练模型或 <code data-wg-notranslate="">.yaml</code> 配置文件。对于定义模型结构或初始化权重至关重要。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">data</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>数据集配置文件的路径（例如 <code data-wg-notranslate="">coco8.yaml</code>).该文件包含特定于数据集的参数，包括训练数据和验证数据的路径、类名和类数。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">epochs</code></td>
+<td><code data-wg-notranslate="">100</code></td>
+<td>训练历元总数。每个历元代表对整个数据集进行一次完整的训练。调整该值会影响训练时间和模型性能。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">time</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>最长训练时间（小时）。如果设置了该值，则会覆盖 <code data-wg-notranslate="">epochs</code> 参数，允许训练在指定的持续时间后自动停止。对于时间有限的训练场景非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">patience</code></td>
+<td><code data-wg-notranslate="">100</code></td>
+<td>在验证指标没有改善的情况下，提前停止训练所需的历元数。当性能趋于平稳时停止训练，有助于防止过度拟合。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">batch</code></td>
+<td><code data-wg-notranslate="">16</code></td>
+<td>训练的批量大小，表示在更新模型内部参数之前要处理多少张图像。自动批处理 (<code data-wg-notranslate="">batch=-1</code>)会根据 GPU 内存可用性动态调整批处理大小。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">imgsz</code></td>
+<td><code data-wg-notranslate="">640</code></td>
+<td>用于训练的目标图像尺寸。所有图像在输入模型前都会被调整到这一尺寸。影响模型精度和计算复杂度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>可保存训练检查点和最终模型权重。这对恢复训练或模型部署非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save_period</code></td>
+<td><code data-wg-notranslate="">-1</code></td>
+<td>保存模型检查点的频率，以 epochs 为单位。值为-1 时将禁用此功能。该功能适用于在长时间训练过程中保存临时模型。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">cache</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在内存中缓存数据集图像 (<code data-wg-notranslate="">True</code>/<code data-wg-notranslate="">ram</code>）、磁盘 (<code data-wg-notranslate="">disk</code>），或禁用它 (<code data-wg-notranslate="">False</code>).通过减少磁盘 I/O 提高训练速度，但代价是增加内存使用量。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">device</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定用于训练的计算设备：单个 GPU (<code data-wg-notranslate="">device=0</code>）、多个 GPU (<code data-wg-notranslate="">device=0,1</code>)、CPU (<code data-wg-notranslate="">device=cpu</code>)，或苹果芯片的 MPS (<code data-wg-notranslate="">device=mps</code>).</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">workers</code></td>
+<td><code data-wg-notranslate="">8</code></td>
+<td>加载数据的工作线程数（每 <code data-wg-notranslate="">RANK</code> 多 GPU 训练）。影响数据预处理和输入模型的速度，尤其适用于多 GPU 设置。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">project</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>保存训练结果的项目目录名称。允许有组织地存储不同的实验。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">name</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>训练运行的名称。用于在项目文件夹内创建一个子目录，用于存储训练日志和输出结果。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">exist_ok</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果为 True，则允许覆盖现有的项目/名称目录。这对迭代实验非常有用，无需手动清除之前的输出。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">pretrained</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>决定是否从预处理模型开始训练。可以是布尔值，也可以是加载权重的特定模型的字符串路径。提高训练效率和模型性能。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">optimizer</code></td>
+<td><code data-wg-notranslate="">'auto'</code></td>
+<td>为培训选择优化器。选项包括 <code data-wg-notranslate="">SGD</code>, <code data-wg-notranslate="">Adam</code>, <code data-wg-notranslate="">AdamW</code>, <code data-wg-notranslate="">NAdam</code>, <code data-wg-notranslate="">RAdam</code>, <code data-wg-notranslate="">RMSProp</code> 等，或 <code data-wg-notranslate="">auto</code> 用于根据模型配置进行自动选择。影响收敛速度和稳定性</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">verbose</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在训练过程中启用冗长输出，提供详细日志和进度更新。有助于调试和密切监控培训过程。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">seed</code></td>
+<td><code data-wg-notranslate="">0</code></td>
+<td>为训练设置随机种子，确保在相同配置下运行的结果具有可重复性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">deterministic</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>强制使用确定性算法，确保可重复性，但由于对非确定性算法的限制，可能会影响性能和速度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">single_cls</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在训练过程中将多类数据集中的所有类别视为单一类别。适用于二元分类任务，或侧重于对象的存在而非分类。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">rect</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>可进行矩形训练，优化批次组成以减少填充。这可以提高效率和速度，但可能会影响模型的准确性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">cos_lr</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>利用余弦学习率调度器，根据历时的余弦曲线调整学习率。这有助于管理学习率，实现更好的收敛。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">close_mosaic</code></td>
+<td><code data-wg-notranslate="">10</code></td>
+<td>在训练完成前禁用最后 N 个历元的马赛克数据增强以稳定训练。设置为 0 则禁用此功能。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">resume</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>从上次保存的检查点恢复训练。自动加载模型权重、优化器状态和历时计数，无缝继续训练。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">amp</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>启用自动混合精度 (AMP) 训练，可减少内存使用量并加快训练速度，同时将对精度的影响降至最低。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">fraction</code></td>
+<td><code data-wg-notranslate="">1.0</code></td>
+<td>指定用于训练的数据集的部分。允许在完整数据集的子集上进行训练，这对实验或资源有限的情况非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">profile</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在训练过程中，可对ONNX 和TensorRT 速度进行剖析，有助于优化模型部署。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">freeze</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>冻结模型的前 N 层或按索引指定的层，从而减少可训练参数的数量。这对微调或迁移学习非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">lr0</code></td>
+<td><code data-wg-notranslate="">0.01</code></td>
+<td>初始学习率（即 <code data-wg-notranslate="">SGD=1E-2</code>, <code data-wg-notranslate="">Adam=1E-3</code>) .调整这个值对优化过程至关重要，会影响模型权重的更新速度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">lrf</code></td>
+<td><code data-wg-notranslate="">0.01</code></td>
+<td>最终学习率占初始学习率的百分比 = (<code data-wg-notranslate="">lr0 * lrf</code>)，与调度程序结合使用，随着时间的推移调整学习率。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">momentum</code></td>
+<td><code data-wg-notranslate="">0.937</code></td>
+<td>用于 SGD 的动量因子，或用于 Adam 优化器的 beta1，用于将过去的梯度纳入当前更新。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">weight_decay</code></td>
+<td><code data-wg-notranslate="">0.0005</code></td>
+<td>L2 正则化项，对大权重进行惩罚，以防止过度拟合。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">warmup_epochs</code></td>
+<td><code data-wg-notranslate="">3.0</code></td>
+<td>学习率预热的历元数，学习率从低值逐渐增加到初始学习率，以在早期稳定训练。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">warmup_momentum</code></td>
+<td><code data-wg-notranslate="">0.8</code></td>
+<td>热身阶段的初始动力，在热身期间逐渐调整到设定动力。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">warmup_bias_lr</code></td>
+<td><code data-wg-notranslate="">0.1</code></td>
+<td>热身阶段的偏置参数学习率，有助于稳定初始历元的模型训练。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">box</code></td>
+<td><code data-wg-notranslate="">7.5</code></td>
+<td>损失函数中边框损失部分的权重，影响对准确预测边框坐标的重视程度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">cls</code></td>
+<td><code data-wg-notranslate="">0.5</code></td>
+<td>分类损失在总损失函数中的权重，影响正确分类预测相对于其他部分的重要性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">dfl</code></td>
+<td><code data-wg-notranslate="">1.5</code></td>
+<td>分布焦点损失权重，在某些YOLO 版本中用于精细分类。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">pose</code></td>
+<td><code data-wg-notranslate="">12.0</code></td>
+<td>姿态损失在姿态估计模型中的权重，影响着准确预测姿态关键点的重点。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">kobj</code></td>
+<td><code data-wg-notranslate="">2.0</code></td>
+<td>姿态估计模型中关键点对象性损失的权重，平衡检测可信度与姿态精度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">label_smoothing</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td>应用标签平滑，将硬标签软化为目标标签和标签均匀分布的混合标签，可以提高泛化效果。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">nbs</code></td>
+<td><code data-wg-notranslate="">64</code></td>
+<td>用于损耗正常化的标称批量大小。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">overlap_mask</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>决定在训练过程中分割掩码是否应该重叠，适用于实例分割任务。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">mask_ratio</code></td>
+<td><code data-wg-notranslate="">4</code></td>
+<td>分割掩码的下采样率，影响训练时使用的掩码分辨率。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">dropout</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td>分类任务中正则化的丢弃率，通过在训练过程中随机省略单元来防止过拟合。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">val</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>可在训练过程中进行验证，以便在单独的数据集上对模型性能进行定期评估。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">plots</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>生成并保存训练和验证指标图以及预测示例图，以便直观地了解模型性能和学习进度。</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="超参数"><a href="#超参数" class="headerlink" title="超参数"></a>超参数</h3><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>参数名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>范围</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">hsv_h</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.015</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>通过色轮的一部分来调整图像的色调，从而引入色彩的可变性。帮助模型在不同的光照条件下通用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">hsv_s</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.7</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>改变图像饱和度的一部分，影响色彩的强度。可用于模拟不同的环境条件。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">hsv_v</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.4</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>将图像的数值（亮度）修改一部分，帮助模型在不同的光照条件下表现良好。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">degrees</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">-180 - +180</code></td>
+<td>在指定的度数范围内随机旋转图像，提高模型识别不同方向物体的能力。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">translate</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.1</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>以图像大小的一小部分水平和垂直平移图像，帮助学习检测部分可见的物体。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">scale</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.5</code></td>
+<td><code data-wg-notranslate="">&gt;=0.0</code></td>
+<td>通过增益因子缩放图像，模拟物体与摄像机的不同距离。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">shear</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">-180 - +180</code></td>
+<td>按指定角度剪切图像，模拟从不同角度观察物体的效果。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">perspective</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 0.001</code></td>
+<td>对图像进行随机透视变换，增强模型理解三维空间中物体的能力。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">flipud</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>以指定的概率将图像翻转过来，在不影响物体特征的情况下增加数据的可变性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">fliplr</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.5</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>以指定的概率将图像从左到右翻转，这对学习对称物体和增加数据集多样性非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">bgr</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>以指定的概率将图像通道从 RGB 翻转到 BGR，用于提高对错误通道排序的稳健性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">mosaic</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">1.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>将四幅训练图像合成一幅，模拟不同的场景构成和物体互动。对复杂场景的理解非常有效。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">mixup</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>混合两幅图像及其标签，创建合成图像。通过引入标签噪声和视觉变化，增强模型的泛化能力。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">copy_paste</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.0</code></td>
+<td><code data-wg-notranslate="">0.0 - 1.0</code></td>
+<td>从一幅图像中复制物体并粘贴到另一幅图像上，用于增加物体实例和学习物体遮挡。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">auto_augment</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">randaugment</code></td>
+<td>-</td>
+<td>自动应用预定义的增强策略 (<code data-wg-notranslate="">randaugment</code>, <code data-wg-notranslate="">autoaugment</code>, <code data-wg-notranslate="">augmix</code>)，通过丰富视觉特征来优化分类任务。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">erasing</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.4</code></td>
+<td><code data-wg-notranslate="">0.0 - 0.9</code></td>
+<td>在分类训练过程中随机擦除部分图像，鼓励模型将识别重点放在不明显的特征上。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">crop_fraction</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">1.0</code></td>
+<td><code data-wg-notranslate="">0.1 - 1.0</code></td>
+<td>将分类图像裁剪为其大小的一小部分，以突出中心特征并适应对象比例，减少背景干扰。</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">epoch、 imgsz、 save、 device、 workers</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Val（评估）"><a href="#Val（评估）" class="headerlink" title="Val（评估）"></a>Val（评估）</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><blockquote>
+<p>Val 模式提供了一套强大的工具和指标，用于评估对象检测模型的性能</p>
+</blockquote>
+<h3 id="demo-1"><a href="#demo-1" class="headerlink" title="demo"></a>demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># load an official model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;path/to/best.pt&quot;</span>)  <span class="comment"># load a custom model</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Validate the model</span></span><br><span class="line">metrics = model.val()  <span class="comment"># no arguments needed, dataset and settings remembered</span></span><br><span class="line">metrics.box.<span class="built_in">map</span>  <span class="comment"># map50-95</span></span><br><span class="line">metrics.box.map50  <span class="comment"># map50</span></span><br><span class="line">metrics.box.map75  <span class="comment"># map75</span></span><br><span class="line">metrics.box.maps  <span class="comment"># a list contains map50-95 of each category</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-超参数"><a href="#参数-超参数" class="headerlink" title="参数&#x2F;超参数"></a>参数&#x2F;超参数</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">data</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定数据集配置文件的路径（如 <code data-wg-notranslate="">coco8.yaml</code>).该文件包括验证数据的路径、类名和类数。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">imgsz</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">640</code></td>
+<td>定义输入图像的尺寸。所有图像在处理前都会调整到这一尺寸。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">batch</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">16</code></td>
+<td>设置每批图像的数量。使用 <code data-wg-notranslate="">-1</code> 的自动批处理功能，可根据 GPU 内存可用性自动调整。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save_json</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果 <code data-wg-notranslate="">True</code>此外，还可将结果保存到 JSON 文件中，以便进一步分析或与其他工具集成。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save_hybrid</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果 <code data-wg-notranslate="">True</code>，保存混合版本的标签，将原始注释与额外的模型预测相结合。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">conf</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.001</code></td>
+<td>设置检测的最小置信度阈值。置信度低于此阈值的检测将被丢弃。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">iou</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.6</code></td>
+<td>设置非最大抑制 (NMS) 的交叉重叠 (IoU) 阈值。有助于减少重复检测。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">max_det</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">300</code></td>
+<td>限制每幅图像的最大检测次数。在密度较高的场景中非常有用，可以防止检测次数过多。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">half</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">True</code></td>
+<td>可进行半精度（FP16）计算，减少内存使用量，在提高速度的同时，将对精度的影响降至最低。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">device</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定验证设备 (<code data-wg-notranslate="">cpu</code>, <code data-wg-notranslate="">cuda:0</code>等）。可灵活利用 CPU 或 GPU 资源。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">dnn</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果 <code data-wg-notranslate="">True</code>它使用 OpenCV DNN 模块进行ONNX 模型推断，为PyTorch 推断方法提供了一种替代方法。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">plots</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>当设置为 <code data-wg-notranslate="">True</code>此外，它还能生成并保存预测结果与地面实况的对比图，以便对模型的性能进行可视化评估。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">rect</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果 <code data-wg-notranslate="">True</code>该软件使用矩形推理进行批处理，减少了填充，可能会提高速度和效率。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">split</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">val</code></td>
+<td>确定用于验证的数据集分割 (<code data-wg-notranslate="">val</code>, <code data-wg-notranslate="">test</code>或 <code data-wg-notranslate="">train</code>).可灵活选择数据段进行性能评估。</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">batch 、 conf、 IoU、 half</span><br></pre></td></tr></table></figure>
+
+<h2 id="Predict-预测"><a href="#Predict-预测" class="headerlink" title="Predict(预测)"></a>Predict(预测)</h2><h3 id="demo-2"><a href="#demo-2" class="headerlink" title="demo"></a>demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a pretrained YOLOv8n model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run inference on &#x27;bus.jpg&#x27; with arguments</span></span><br><span class="line">result = model.predict(<span class="string">&quot;bus.jpg&quot;</span>, save=<span class="literal">True</span>, imgsz=<span class="number">320</span>, conf=<span class="number">0.5</span>)</span><br><span class="line"><span class="comment"># Value of result</span></span><br><span class="line"><span class="keyword">for</span> result <span class="keyword">in</span> results:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;图像原始大小:&quot;</span>, result.orig_shape)</span><br><span class="line">    data_numpy = result.boxes.data.cpu().numpy()</span><br><span class="line">    <span class="keyword">for</span> data <span class="keyword">in</span> data_numpy:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;data&quot;</span>, data)</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;左上角X轴坐标:&quot;</span>, data[<span class="number">0</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;左上角Y轴坐标:&quot;</span>, data[<span class="number">1</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;右下角X轴坐标:&quot;</span>, data[<span class="number">2</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;右下角Y轴坐标:&quot;</span>, data[<span class="number">3</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;置---信---度:&quot;</span>, data[<span class="number">4</span>])</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;检测到的类有:&quot;</span>,  data[<span class="number">5</span>])</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-1"><a href="#参数-1" class="headerlink" title="参数"></a>参数</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>论据</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">source</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">'ultralytics/assets'</code></td>
+<td>指定推理的数据源。可以是图像路径、视频文件、目录、URL 或用于实时馈送的设备 ID。支持多种格式和来源，可灵活应用于不同类型的输入。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">conf</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.25</code></td>
+<td>设置检测的最小置信度阈值。如果检测到的对象置信度低于此阈值，则将不予考虑。调整该值有助于减少误报。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">iou</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">0.7</code></td>
+<td>非最大抑制 (NMS) 的交叉重叠 (IoU) 阈值。较低的数值可以消除重叠的方框，从而减少检测次数，这对减少重复检测非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">imgsz</code></td>
+<td><code data-wg-notranslate="">int or tuple</code></td>
+<td><code data-wg-notranslate="">640</code></td>
+<td>定义用于推理的图像大小。可以是一个整数 <code data-wg-notranslate="">640</code> 或一个（高、宽）元组。适当调整大小可以提高检测精度和处理速度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">half</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>启用半精度（FP16）推理，可加快支持的 GPU 上的模型推理速度，同时将对精度的影响降至最低。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">device</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定用于推理的设备（例如：......）、 <code data-wg-notranslate="">cpu</code>, <code data-wg-notranslate="">cuda:0</code> 或 <code data-wg-notranslate="">0</code>).允许用户选择 CPU、特定 GPU 或其他计算设备来执行模型。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">max_det</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">300</code></td>
+<td>每幅图像允许的最大检测次数。限制模型在单次推理中可检测到的物体总数，防止在密集场景中产生过多输出。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">vid_stride</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">1</code></td>
+<td>视频输入的帧间距。允许跳过视频中的帧，以加快处理速度，但会牺牲时间分辨率。值为 1 时处理每一帧，值越大跳帧越多。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">stream_buffer</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>确定在处理视频流时是否对所有帧进行缓冲 (<code data-wg-notranslate="">True</code>)，或者模型是否应该返回最近的帧 (<code data-wg-notranslate="">False</code>).适用于实时应用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">visualize</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在推理过程中激活模型特征的可视化，从而深入了解模型 "看到 "了什么。这对调试和模型解释非常有用。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">augment</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>可对预测进行测试时间增强（TTA），从而在牺牲推理速度的情况下提高检测的鲁棒性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">agnostic_nms</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>启用与类别无关的非最大抑制 (NMS)，可合并不同类别的重叠方框。这在多类检测场景中非常有用，因为在这种场景中，类的重叠很常见。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">classes</code></td>
+<td><code data-wg-notranslate="">list[int]</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>根据一组类别 ID 过滤预测结果。只返回属于指定类别的检测结果。在多类检测任务中，该功能有助于集中检测相关对象。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">retina_masks</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>如果模型中存在高分辨率的分割掩膜，则使用高分辨率的分割掩膜。这可以提高分割任务的掩膜质量，提供更精细的细节。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">embed</code></td>
+<td><code data-wg-notranslate="">list[int]</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定从中提取特征向量或嵌入的层。这对聚类或相似性搜索等下游任务非常有用。</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="常用参数-2"><a href="#常用参数-2" class="headerlink" title="常用参数"></a>常用参数</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conf、 IoU、 half、 imgsz、 device、 classes、</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果参数"><a href="#结果参数" class="headerlink" title="结果参数"></a>结果参数</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">orig_img</code></td>
+<td><code data-wg-notranslate="">numpy.ndarray</code></td>
+<td>原始图像的 numpy 数组。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">orig_shape</code></td>
+<td><code data-wg-notranslate="">tuple</code></td>
+<td>原始图像的形状，格式为（高、宽）。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">boxes</code></td>
+<td><code data-wg-notranslate="">Boxes, optional</code></td>
+<td>包含检测边界框的方框对象。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">masks</code></td>
+<td><code data-wg-notranslate="">Masks, optional</code></td>
+<td>包含检测掩码的掩码对象。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">probs</code></td>
+<td><code data-wg-notranslate="">Probs, optional</code></td>
+<td>Probs 对象，包含分类任务中每个类别的概率。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">keypoints</code></td>
+<td><code data-wg-notranslate="">Keypoints, optional</code></td>
+<td>关键点对象，包含每个对象的检测关键点。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">obb</code></td>
+<td><code data-wg-notranslate="">OBB, optional</code></td>
+<td>包含定向包围盒的 OBB 对象。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">speed</code></td>
+<td><code data-wg-notranslate="">dict</code></td>
+<td>每幅图像的预处理、推理和后处理速度字典，单位为毫秒。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">names</code></td>
+<td><code data-wg-notranslate="">dict</code></td>
+<td>类名字典。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">path</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td>图像文件的路径。</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="results支持方法"><a href="#results支持方法" class="headerlink" title="results支持方法"></a>results支持方法</h3><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>返回类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">update()</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>更新结果对象的方框、掩码和 probs 属性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">cpu()</code></td>
+<td><code data-wg-notranslate="">Results</code></td>
+<td>返回包含 CPU 内存中所有张量的结果对象副本。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">numpy()</code></td>
+<td><code data-wg-notranslate="">Results</code></td>
+<td>返回结果对象的副本，其中所有张量均为 numpy 数组。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">cuda()</code></td>
+<td><code data-wg-notranslate="">Results</code></td>
+<td>返回包含 GPU 内存中所有张量的 Results 对象副本。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">to()</code></td>
+<td><code data-wg-notranslate="">Results</code></td>
+<td>返回带有指定设备和 dtype 上张量的 Results 对象副本。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">new()</code></td>
+<td><code data-wg-notranslate="">Results</code></td>
+<td>返回一个具有相同图像、路径和名称的新结果对象。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">plot()</code></td>
+<td><code data-wg-notranslate="">numpy.ndarray</code></td>
+<td>绘制检测结果。返回注释图像的 numpy 数组。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">show()</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>在屏幕上显示带注释的结果。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save()</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>将注释结果保存到文件中。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">verbose()</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td>返回每个任务的日志字符串。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save_txt()</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>将预测结果保存到 txt 文件中。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">save_crop()</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>将裁剪后的预测保存到 <code data-wg-notranslate="">save_dir/cls/file_name.jpg</code>.</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">tojson()</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td>将对象转换为 JSON 格式。</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h2 id="Export（导出）"><a href="#Export（导出）" class="headerlink" title="Export（导出）"></a>Export（导出）</h2><blockquote>
+<p>Ultralytics YOLOv8 中的导出模式为将训练好的模型导出为不同格式提供了多种选择，使其可以在各种平台和设备上部署</p>
+</blockquote>
+<h3 id="demo-3"><a href="#demo-3" class="headerlink" title="demo"></a>demo</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> ultralytics <span class="keyword">import</span> YOLO</span><br><span class="line"></span><br><span class="line"><span class="comment"># Load a model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;yolov8n.pt&quot;</span>)  <span class="comment"># load an official model</span></span><br><span class="line">model = YOLO(<span class="string">&quot;path/to/best.pt&quot;</span>)  <span class="comment"># load a custom trained model</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Export the model</span></span><br><span class="line">model.export(<span class="built_in">format</span>=<span class="string">&quot;onnx&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数-2"><a href="#参数-2" class="headerlink" title="参数"></a>参数</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>论据</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code data-wg-notranslate="">format</code></td>
+<td><code data-wg-notranslate="">str</code></td>
+<td><code data-wg-notranslate="">'torchscript'</code></td>
+<td>导出模型的目标格式，例如 <code data-wg-notranslate="">'onnx'</code>, <code data-wg-notranslate="">'torchscript'</code>, <code data-wg-notranslate="">'tensorflow'</code>或其他，定义与各种部署环境的兼容性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">imgsz</code></td>
+<td><code data-wg-notranslate="">int</code> 或 <code data-wg-notranslate="">tuple</code></td>
+<td><code data-wg-notranslate="">640</code></td>
+<td>模型输入所需的图像尺寸。对于正方形图像，可以是一个整数，或者是一个元组 <code data-wg-notranslate="">(height, width)</code> 了解具体尺寸。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">keras</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>启用导出为 Keras 格式的TensorFlow SavedModel ，提供与TensorFlow serving 和 API 的兼容性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">optimize</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在导出到TorchScript 时，应用针对移动设备的优化，可能会减小模型大小并提高性能。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">half</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>启用 FP16（半精度）量化，在支持的硬件上减小模型大小并可能加快推理速度。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">int8</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>激活 INT8 量化，进一步压缩模型并加快推理速度，同时将精度损失降至最低，主要用于边缘设备。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">dynamic</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>允许ONNX 和TensorRT 导出动态输入尺寸，提高了处理不同图像尺寸的灵活性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">simplify</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>简化了ONNX 导出的模型图，可能会提高性能和兼容性。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">opset</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">None</code></td>
+<td>指定ONNX opset 版本，以便与不同的ONNX 解析器和运行时兼容。如果未设置，则使用最新的支持版本。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">workspace</code></td>
+<td><code data-wg-notranslate="">float</code></td>
+<td><code data-wg-notranslate="">4.0</code></td>
+<td>为TensorRT 优化设置最大工作区大小（GiB），以平衡内存使用和性能。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">nms</code></td>
+<td><code data-wg-notranslate="">bool</code></td>
+<td><code data-wg-notranslate="">False</code></td>
+<td>在CoreML 导出中添加非最大值抑制 (NMS)，这对精确高效的检测后处理至关重要。</td>
+</tr>
+<tr>
+<td><code data-wg-notranslate="">batch</code></td>
+<td><code data-wg-notranslate="">int</code></td>
+<td><code data-wg-notranslate="">1</code></td>
+<td>指定导出模型的批量推理大小，或导出模型将同时处理的图像的最大数量。 <code data-wg-notranslate="">predict</code> 模式。</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h3 id="支持导出格式"><a href="#支持导出格式" class="headerlink" title="支持导出格式"></a>支持导出格式</h3><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>格式</th>
+<th><code data-wg-notranslate="">format</code> 论据</th>
+<th>模型</th>
+<th>元数据</th>
+<th>论据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://pytorch.org/">PyTorch</a></td>
+<td>-</td>
+<td><code data-wg-notranslate="">yolov8n.pt</code></td>
+<td>✅</td>
+<td>-</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/torchscript/">TorchScript</a></td>
+<td><code data-wg-notranslate="">torchscript</code></td>
+<td><code data-wg-notranslate="">yolov8n.torchscript</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">optimize</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/onnx/">ONNX</a></td>
+<td><code data-wg-notranslate="">onnx</code></td>
+<td><code data-wg-notranslate="">yolov8n.onnx</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">dynamic</code>, <code data-wg-notranslate="">simplify</code>, <code data-wg-notranslate="">opset</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/openvino/">OpenVINO</a></td>
+<td><code data-wg-notranslate="">openvino</code></td>
+<td><code data-wg-notranslate="">yolov8n_openvino_model/</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/tensorrt/">TensorRT</a></td>
+<td><code data-wg-notranslate="">engine</code></td>
+<td><code data-wg-notranslate="">yolov8n.engine</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">dynamic</code>, <code data-wg-notranslate="">simplify</code>, <code data-wg-notranslate="">workspace</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/coreml/">CoreML</a></td>
+<td><code data-wg-notranslate="">coreml</code></td>
+<td><code data-wg-notranslate="">yolov8n.mlpackage</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">nms</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/tf-savedmodel/">TF SavedModel</a></td>
+<td><code data-wg-notranslate="">saved_model</code></td>
+<td><code data-wg-notranslate="">yolov8n_saved_model/</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">keras</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/tf-graphdef/">TF GraphDef</a></td>
+<td><code data-wg-notranslate="">pb</code></td>
+<td><code data-wg-notranslate="">yolov8n.pb</code></td>
+<td>❌</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/tflite/">TF 轻型</a></td>
+<td><code data-wg-notranslate="">tflite</code></td>
+<td><code data-wg-notranslate="">yolov8n.tflite</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/edge-tpu/">TF 边缘TPU</a></td>
+<td><code data-wg-notranslate="">edgetpu</code></td>
+<td><code data-wg-notranslate="">yolov8n_edgetpu.tflite</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/tfjs/">TF.js</a></td>
+<td><code data-wg-notranslate="">tfjs</code></td>
+<td><code data-wg-notranslate="">yolov8n_web_model/</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">int8</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/paddlepaddle/">PaddlePaddle</a></td>
+<td><code data-wg-notranslate="">paddle</code></td>
+<td><code data-wg-notranslate="">yolov8n_paddle_model/</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://docs.ultralytics.com/zh/integrations/ncnn/">NCNN</a></td>
+<td><code data-wg-notranslate="">ncnn</code></td>
+<td><code data-wg-notranslate="">yolov8n_ncnn_model/</code></td>
+<td>✅</td>
+<td><code data-wg-notranslate="">imgsz</code>, <code data-wg-notranslate="">half</code>, <code data-wg-notranslate="">batch</code></td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h1 id="Yolo的模式类型"><a href="#Yolo的模式类型" class="headerlink" title="Yolo的模式类型"></a>Yolo的模式类型</h1><h2 id="Detect（检测）"><a href="#Detect（检测）" class="headerlink" title="Detect（检测）"></a>Detect（检测）</h2><blockquote>
+<p>检测：包括检测图像或视频帧中的物体，并在其周围绘制边界框。YOLOv8 可在单幅图像或视频帧中高精度、高速度地检测多个物体</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/26833433/243418624-5785cb93-74c9-4541-9179-d5c6782d491a.png" alt="物体检测示例"></p>
+<h4 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h4><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>尺寸<br><sup> （像素）</sup></th>
+<th>mAPval<sup><br>50-95</sup></th>
+<th>速度<br><sup>CPUONNX<br> (ms)</sup></th>
+<th>速度<br> A100<sup> TensorRT<br> （毫秒）</sup></th>
+<th>params<br><sup>(M)</sup></th>
+<th>FLOPs<br><sup>(B)</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n.pt">YOLOv8n</a></td>
+<td>640</td>
+<td>37.3</td>
+<td>80.4</td>
+<td>0.99</td>
+<td>3.2</td>
+<td>8.7</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s.pt">YOLOv8s</a></td>
+<td>640</td>
+<td>44.9</td>
+<td>128.4</td>
+<td>1.20</td>
+<td>11.2</td>
+<td>28.6</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m.pt">YOLOv8m</a></td>
+<td>640</td>
+<td>50.2</td>
+<td>234.7</td>
+<td>1.83</td>
+<td>25.9</td>
+<td>78.9</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l.pt">YOLOv8l</a></td>
+<td>640</td>
+<td>52.9</td>
+<td>375.2</td>
+<td>2.39</td>
+<td>43.7</td>
+<td>165.2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x.pt">YOLOv8x</a></td>
+<td>640</td>
+<td>53.9</td>
+<td>479.1</td>
+<td>3.53</td>
+<td>68.2</td>
+<td>257.8</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h2 id="Segment（分割）"><a href="#Segment（分割）" class="headerlink" title="Segment（分割）"></a>Segment（分割）</h2><blockquote>
+<p>分割是一项根据图像内容将图像分割成不同区域的任务。每个区域根据其内容分配一个标签。这项任务在图像分割和医学成像等应用中非常有用。YOLOv8 使用 U-Net 架构的变体来执行分割</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/26833433/243418644-7df320b8-098d-47f1-85c5-26604d761286.png" alt="实例分割示例"></p>
+<h4 id="模型-1"><a href="#模型-1" class="headerlink" title="模型"></a>模型</h4><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>尺寸<br><sup> （像素）</sup></th>
+<th>mAPbox<sup><br>50-95</sup></th>
+<th>mAPmask<sup><br>50-95</sup></th>
+<th>速度<br><sup>CPUONNX<br> (ms)</sup></th>
+<th>速度<br> A100<sup> TensorRT<br> （毫秒）</sup></th>
+<th>params<br><sup>(M)</sup></th>
+<th>FLOPs<br><sup>(B)</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n-seg.pt">YOLOv8n-seg</a></td>
+<td>640</td>
+<td>36.7</td>
+<td>30.5</td>
+<td>96.1</td>
+<td>1.21</td>
+<td>3.4</td>
+<td>12.6</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s-seg.pt">YOLOv8s-seg</a></td>
+<td>640</td>
+<td>44.6</td>
+<td>36.8</td>
+<td>155.7</td>
+<td>1.47</td>
+<td>11.8</td>
+<td>42.6</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m-seg.pt">YOLOv8m-seg</a></td>
+<td>640</td>
+<td>49.9</td>
+<td>40.8</td>
+<td>317.0</td>
+<td>2.18</td>
+<td>27.3</td>
+<td>110.2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-seg.pt">YOLOv8l-seg</a></td>
+<td>640</td>
+<td>52.3</td>
+<td>42.6</td>
+<td>572.4</td>
+<td>2.79</td>
+<td>46.0</td>
+<td>220.5</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-seg.pt">YOLOv8x-seg</a></td>
+<td>640</td>
+<td>53.4</td>
+<td>43.4</td>
+<td>712.1</td>
+<td>4.02</td>
+<td>71.8</td>
+<td>344.1</td>
+</tr>
+</tbody>
+</table></div>
+
+
+<h2 id="Classify（分类）"><a href="#Classify（分类）" class="headerlink" title="Classify（分类）"></a>Classify（分类）</h2><blockquote>
+<p>YOLOv8 可用于根据图像内容对图像进行分类。它使用 EfficientNet 架构的一种变体来执行分类。</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/26833433/243418606-adf35c62-2e11-405d-84c6-b84e7d013804.png" alt="图像分类示例"></p>
+<h4 id="模型-2"><a href="#模型-2" class="headerlink" title="模型"></a>模型</h4><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>尺寸<br><sup> （像素）</sup></th>
+<th>acc<br><sup>top1</sup></th>
+<th>acc<br><sup>top5</sup></th>
+<th>速度<br><sup>CPUONNX<br> (ms)</sup></th>
+<th>速度<br> A100<sup> TensorRT<br> （毫秒）</sup></th>
+<th>params<br><sup>(M)</sup></th>
+<th>FLOPs<br><sup>(B) at 640</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n-cls.pt">YOLOv8n-cls</a></td>
+<td>224</td>
+<td>69.0</td>
+<td>88.3</td>
+<td>12.9</td>
+<td>0.31</td>
+<td>2.7</td>
+<td>4.3</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s-cls.pt">YOLOv8s-cls</a></td>
+<td>224</td>
+<td>73.8</td>
+<td>91.7</td>
+<td>23.4</td>
+<td>0.35</td>
+<td>6.4</td>
+<td>13.5</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m-cls.pt">YOLOv8m-cls</a></td>
+<td>224</td>
+<td>76.8</td>
+<td>93.5</td>
+<td>85.4</td>
+<td>0.62</td>
+<td>17.0</td>
+<td>42.7</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-cls.pt">YOLOv8l-cls</a></td>
+<td>224</td>
+<td>76.8</td>
+<td>93.5</td>
+<td>163.0</td>
+<td>0.87</td>
+<td>37.5</td>
+<td>99.7</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-cls.pt">YOLOv8x-cls</a></td>
+<td>224</td>
+<td>79.0</td>
+<td>94.6</td>
+<td>232.0</td>
+<td>1.01</td>
+<td>57.4</td>
+<td>154.8</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h2 id="Pose（姿态）"><a href="#Pose（姿态）" class="headerlink" title="Pose（姿态）"></a>Pose（姿态）</h2><blockquote>
+<p>姿势&#x2F;关键点检测是一项涉及检测图像或视频帧中特定点的任务。这些点被称为关键点，用于跟踪运动或姿势估计。YOLOv8 可以高精度、高速度地检测图像或视频帧中的关键点。</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/26833433/243418616-9811ac0b-a4a7-452a-8aba-484ba32bb4a8.png" alt="姿势估计示例"></p>
+<h4 id="模型-3"><a href="#模型-3" class="headerlink" title="模型"></a>模型</h4><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>尺寸<br><sup> （像素）</sup></th>
+<th><sup><br>50-95</sup></th>
+<th>mAPpose<sup><br>50</sup></th>
+<th>速度<br><sup>CPUONNX<br> (ms)</sup></th>
+<th>速度<br> A100<sup> TensorRT<br> （毫秒）</sup></th>
+<th>params<br><sup>(M)</sup></th>
+<th>FLOPs<br><sup>(B)</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n-pose.pt">YOLOv8n-姿势</a></td>
+<td>640</td>
+<td>50.4</td>
+<td>80.1</td>
+<td>131.8</td>
+<td>1.18</td>
+<td>3.3</td>
+<td>9.2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s-pose.pt">YOLOv8s-姿势</a></td>
+<td>640</td>
+<td>60.0</td>
+<td>86.2</td>
+<td>233.2</td>
+<td>1.42</td>
+<td>11.6</td>
+<td>30.2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m-pose.pt">YOLOv8m-姿势</a></td>
+<td>640</td>
+<td>65.0</td>
+<td>88.8</td>
+<td>456.3</td>
+<td>2.00</td>
+<td>26.4</td>
+<td>81.0</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-pose.pt">YOLOv8l-姿势</a></td>
+<td>640</td>
+<td>67.6</td>
+<td>90.0</td>
+<td>784.5</td>
+<td>2.59</td>
+<td>44.4</td>
+<td>168.6</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-pose.pt">YOLOv8x-姿势</a></td>
+<td>640</td>
+<td>69.2</td>
+<td>90.2</td>
+<td>1607.1</td>
+<td>3.73</td>
+<td>69.4</td>
+<td>263.2</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-pose-p6.pt">YOLOv8x-pose-p6</a></td>
+<td>1280</td>
+<td>71.6</td>
+<td>91.2</td>
+<td>4088.7</td>
+<td>10.04</td>
+<td>99.1</td>
+<td>1066.4</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h2 id="OBB（定向检测）"><a href="#OBB（定向检测）" class="headerlink" title="OBB（定向检测）"></a>OBB（定向检测）</h2><blockquote>
+<p>YOLOv8 可以高精度、高速度地检测图像或视频帧中的旋转物体。</p>
+</blockquote>
+<p><img src="https://github.com/RizwanMunawar/ultralytics/assets/62513924/5051d324-416f-4b58-ab62-f1bf9d7134b0" alt="使用 OBB 进行船舶探测"></p>
+<h4 id="模型-4"><a href="#模型-4" class="headerlink" title="模型"></a>模型</h4><div class="md-typeset__scrollwrap"><div class="md-typeset__table"><table>
+<thead>
+<tr>
+<th>模型</th>
+<th>尺寸<br><sup> （像素）</sup></th>
+<th>mAPtest<sup><br>50</sup></th>
+<th>速度<br><sup>CPUONNX<br> (ms)</sup></th>
+<th>速度<br> A100<sup> TensorRT<br> （毫秒）</sup></th>
+<th>params<br><sup>(M)</sup></th>
+<th>FLOPs<br><sup>(B)</sup></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8n-obb.pt">YOLOv8n-obb</a></td>
+<td>1024</td>
+<td>78.0</td>
+<td>204.77</td>
+<td>3.57</td>
+<td>3.1</td>
+<td>23.3</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8s-obb.pt">YOLOv8s-obb</a></td>
+<td>1024</td>
+<td>79.5</td>
+<td>424.88</td>
+<td>4.07</td>
+<td>11.4</td>
+<td>76.3</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8m-obb.pt">YOLOv8m-obb</a></td>
+<td>1024</td>
+<td>80.5</td>
+<td>763.48</td>
+<td>7.61</td>
+<td>26.4</td>
+<td>208.6</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8l-obb.pt">YOLOv8l-obb</a></td>
+<td>1024</td>
+<td>80.7</td>
+<td>1278.42</td>
+<td>11.83</td>
+<td>44.5</td>
+<td>433.8</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://github.com/ultralytics/assets/releases/download/v8.2.0/yolov8x-obb.pt">YOLOv8x-obb</a></td>
+<td>1024</td>
+<td>81.36</td>
+<td>1759.10</td>
+<td>13.23</td>
+<td>69.5</td>
+<td>676.7</td>
+</tr>
+</tbody>
+</table></div></div>
+
+
+<h2 id="个人经验"><a href="#个人经验" class="headerlink" title="个人经验"></a>个人经验</h2><h3 id="如何使用Yolov8"><a href="#如何使用Yolov8" class="headerlink" title="如何使用Yolov8"></a>如何使用Yolov8</h3><blockquote>
+<p>github官网找到项目地址：[<a target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics]">https://github.com/ultralytics/ultralytics]</a></p>
+<p>所需下载PyTorch环境版本地址：[<a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/]">https://pytorch.org/get-started/locally/]</a></p>
+<p>下载项目以后安装依赖：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install ultralytics</span><br><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 (根据自己电脑配置决定)</span><br></pre></td></tr></table></figure>
+
+<p>使用显卡启动Yolo所需配置：</p>
+<p>cuda，cudnn</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nvidia-smi 查看自己电脑支持的最高cuda版本，建议安装11.8比较稳定</span><br><span class="line">然后安装对应支持的cuda，cudnn</span><br><span class="line">参考：https://blog.csdn.net/jhsignal/article/details/111401628</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20240530004125740.png" alt="image-20240530004125740"></p>
+<p>验证是否支持、是否安装成功</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="built_in">print</span>(torch.cuda.is_available())</span><br><span class="line">x = torch.rand(<span class="number">5</span>, <span class="number">5</span>).cuda()</span><br><span class="line"><span class="built_in">print</span>(x)</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="训练结果参数理解"><a href="#训练结果参数理解" class="headerlink" title="训练结果参数理解"></a>训练结果参数理解</h3><blockquote>
+<p>![屏幕截图 2024-05-28 234032](D:\Ondrive\OneDrive\图片\屏幕快照\屏幕截图 2024-05-28 234032.png)</p>
+<p>Class：类别</p>
+<p>Image：图片数量</p>
+<p>Instances：类别数量</p>
+<p>Box（P）：边界框的精度（Precision），反映了模型预测的边界框中正确预测的比例。高精度表示模型产生的假阳性（False Positives）较少。其中，真阳性是正确预测的目标数，假阳性是错误标记的目标数。<br>计算方法（不懂）：</p>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Tick_Tick\Image\6655f78febad3a00000000b1.png" alt="6655f78febad3a00000000b1"></p>
+<p>R - Recall：R 即召回率（Recall），衡量了模型捕获真实目标的能力。高召回率表示模型能够检测到大多数真实目标，但可能包括一些错误的检测。</p>
+<p>mAP50（mean Average Precision）：mAP50 指的是在 IoU（交并比）阈值为0.50时的平均精度（Mean Average Precision）。这是一个常用的指标，因为它只考虑较为宽松的匹配标准。它测量的是当预测的边界框与真实边界框的交并比至少为0.50时的平均精度。</p>
+<p>mAP50-95：mAP50-95 是一个更全面的性能指标，它计算了从 IoU&#x3D;0.50 到 IoU&#x3D;0.95（每隔0.05一个阶梯）的平均精度。这是评估模型整体性能的一个更严格的标准，因为它考虑了更多的匹配严格程度。</p>
+<p>训练参数IoU（预测使用的）：假设你有两个边界框，一个是预测边界框（Predicted Box），另一个是真实边界框（Ground Truth Box）：</p>
+<p>交集（Intersection）：预测边界框和真实边界框重叠区域的面积。<br>并集（Union）：预测边界框和真实边界框覆盖的总面积，但重叠区域只计算一次。<br>IoU 的值范围从0到1：IoU &#x3D; 0 表示没有重叠。IoU &#x3D; 1 表示完全重叠。</p>
+<p>2024-05-30</p>
+</blockquote>
+<h4 id="待完善"><a href="#待完善" class="headerlink" title="待完善"></a>待完善</h4><blockquote>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://username.github.io/project">Conca Xu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://username.github.io/project/2024/07/18/YoloBaseNode/">https://username.github.io/project/2024/07/18/YoloBaseNode/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://username.github.io/project" target="_blank">ConcaXu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/project/tags/AI/">AI</a><a class="post-meta__tags" href="/project/tags/Python/">Python</a></div><div class="post_share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/project/2024/04/07/hello-world/" title="Hello World"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="this.onerror=null;this.src='/project/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Conca Xu</div><div class="author-info__description">This is Conca Xu</div></div><div class="card-info-data site-data is-center"><a href="/project/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/project/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/project/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ConcaXu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Yolo%E7%9A%84%E4%BB%BB%E5%8A%A1%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">Yolo的任务分类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Train%EF%BC%88%E8%AE%AD%E7%BB%83%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">Train（训练）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5"><span class="toc-number">1.1.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#demo"><span class="toc-number">1.1.2.</span> <span class="toc-text">demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.4.</span> <span class="toc-text">超参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0"><span class="toc-number">1.1.5.</span> <span class="toc-text">常用参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Val%EF%BC%88%E8%AF%84%E4%BC%B0%EF%BC%89"><span class="toc-number">1.2.</span> <span class="toc-text">Val（评估）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E5%BF%B5-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#demo-1"><span class="toc-number">1.2.2.</span> <span class="toc-text">demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-%E8%B6%85%E5%8F%82%E6%95%B0"><span class="toc-number">1.2.3.</span> <span class="toc-text">参数&#x2F;超参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0-1"><span class="toc-number">1.2.4.</span> <span class="toc-text">常用参数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Predict-%E9%A2%84%E6%B5%8B"><span class="toc-number">1.3.</span> <span class="toc-text">Predict(预测)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#demo-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-1"><span class="toc-number">1.3.2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%8F%82%E6%95%B0-2"><span class="toc-number">1.3.3.</span> <span class="toc-text">常用参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C%E5%8F%82%E6%95%B0"><span class="toc-number">1.3.4.</span> <span class="toc-text">结果参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#results%E6%94%AF%E6%8C%81%E6%96%B9%E6%B3%95"><span class="toc-number">1.3.5.</span> <span class="toc-text">results支持方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Export%EF%BC%88%E5%AF%BC%E5%87%BA%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">Export（导出）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#demo-3"><span class="toc-number">1.4.1.</span> <span class="toc-text">demo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E6%95%B0-2"><span class="toc-number">1.4.2.</span> <span class="toc-text">参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%AF%BC%E5%87%BA%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.4.3.</span> <span class="toc-text">支持导出格式</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Yolo%E7%9A%84%E6%A8%A1%E5%BC%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.</span> <span class="toc-text">Yolo的模式类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Detect%EF%BC%88%E6%A3%80%E6%B5%8B%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">Detect（检测）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B"><span class="toc-number">2.1.0.1.</span> <span class="toc-text">模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Segment%EF%BC%88%E5%88%86%E5%89%B2%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">Segment（分割）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B-1"><span class="toc-number">2.2.0.1.</span> <span class="toc-text">模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Classify%EF%BC%88%E5%88%86%E7%B1%BB%EF%BC%89"><span class="toc-number">2.3.</span> <span class="toc-text">Classify（分类）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B-2"><span class="toc-number">2.3.0.1.</span> <span class="toc-text">模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pose%EF%BC%88%E5%A7%BF%E6%80%81%EF%BC%89"><span class="toc-number">2.4.</span> <span class="toc-text">Pose（姿态）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B-3"><span class="toc-number">2.4.0.1.</span> <span class="toc-text">模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OBB%EF%BC%88%E5%AE%9A%E5%90%91%E6%A3%80%E6%B5%8B%EF%BC%89"><span class="toc-number">2.5.</span> <span class="toc-text">OBB（定向检测）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B-4"><span class="toc-number">2.5.0.1.</span> <span class="toc-text">模型</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%BB%8F%E9%AA%8C"><span class="toc-number">2.6.</span> <span class="toc-text">个人经验</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Yolov8"><span class="toc-number">2.6.1.</span> <span class="toc-text">如何使用Yolov8</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AE%AD%E7%BB%83%E7%BB%93%E6%9E%9C%E5%8F%82%E6%95%B0%E7%90%86%E8%A7%A3"><span class="toc-number">2.6.2.</span> <span class="toc-text">训练结果参数理解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BE%85%E5%AE%8C%E5%96%84"><span class="toc-number">2.6.2.1.</span> <span class="toc-text">待完善</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2024/07/18/YoloBaseNode/" title="YoloBaseNode">YoloBaseNode</a><time datetime="2024-07-18T06:38:36.000Z" title="发表于 2024-07-18 14:38:36">2024-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/project/2024/04/07/hello-world/" title="Hello World">Hello World</a><time datetime="2024-04-06T16:38:36.000Z" title="发表于 2024-04-07 00:38:36">2024-04-07</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Conca Xu</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/project/js/utils.js?v=4.13.0"></script><script src="/project/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
