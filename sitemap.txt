@@ -3,8 +3,8 @@ https://username.github.io/project/tags/index.html
 https://username.github.io/project/2024/04/07/hello-world/
 https://username.github.io/project/categories/index.html
 https://username.github.io/project
-https://username.github.io/project/tags/node-js/
-https://username.github.io/project/tags/hexo/
 https://username.github.io/project/tags/AI/
 https://username.github.io/project/tags/Python/
+https://username.github.io/project/tags/node-js/
+https://username.github.io/project/tags/hexo/
 https://username.github.io/project/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
