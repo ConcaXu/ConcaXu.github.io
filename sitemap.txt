@@ -1,11 +1,13 @@
+https://concaxu.github.io/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/
+https://concaxu.github.io/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/
 https://concaxu.github.io/2024/07/18/YoloBaseNode/
-https://concaxu.github.io/2024/07/18/test/
+https://concaxu.github.io/2024/07/31/Hexo%E7%AC%94%E8%AE%B0/
 https://concaxu.github.io/tags/index.html
-https://concaxu.github.io/2024/04/07/hello-world/
 https://concaxu.github.io/categories/index.html
 https://concaxu.github.io/
-https://concaxu.github.io/tags/node-js/
-https://concaxu.github.io/tags/hexo/
+https://concaxu.github.io/tags/Hexo/
+https://concaxu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/
 https://concaxu.github.io/tags/AI/
 https://concaxu.github.io/tags/Python/
+https://concaxu.github.io/tags/%E5%BE%AE%E4%BF%A1SDK/
 https://concaxu.github.io/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/

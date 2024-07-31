@@ -1,0 +1,551 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>小程序BUG记录 | ConcaXu</title><meta name="author" content="Conca Xu"><meta name="copyright" content="Conca Xu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="​域名非法问题小程序发布必须是合法的https域名 ，尽量是一级，二级域名证书小程序中的前端默认不可以像不在域名列表中的端口发送url请求，例如微信的登录url必须去访问本服务器的后端，通过本服务器的后端做中转站像微信的后端去发送url请 微信支付问题 public class PayUtil {private static Logger logger &#x3D; Logger.getLogge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序BUG记录">
+<meta property="og:url" content="https://concaxu.github.io/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/index.html">
+<meta property="og:site_name" content="ConcaXu">
+<meta property="og:description" content="​域名非法问题小程序发布必须是合法的https域名 ，尽量是一级，二级域名证书小程序中的前端默认不可以像不在域名列表中的端口发送url请求，例如微信的登录url必须去访问本服务器的后端，通过本服务器的后端做中转站像微信的后端去发送url请 微信支付问题 public class PayUtil {private static Logger logger &#x3D; Logger.getLogge">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4">
+<meta property="article:published_time" content="2024-07-31T13:09:53.000Z">
+<meta property="article:modified_time" content="2024-07-31T13:15:02.157Z">
+<meta property="article:author" content="Conca Xu">
+<meta property="article:tag" content="小程序">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://concaxu.github.io/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://jsdelivr.pai233.top/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://jsdelivr.pai233.top/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://jsdelivr.pai233.top/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '小程序BUG记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2024-07-31 21:15:02'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/modify.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="ConcaXu" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/15189043253972288')"><nav id="nav"><span id="blog-info"><a href="/" title="ConcaXu"><span class="site-name">ConcaXu</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">小程序BUG记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-31T13:09:53.000Z" title="发表于 2024-07-31 21:09:53">2024-07-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-31T13:15:02.157Z" title="更新于 2024-07-31 21:15:02">2024-07-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="小程序BUG记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>​<br>域名非法问题<br>小程序发布必须是合法的https域名 ，尽量是一级，二级域名证书<br>小程序中的前端默认不可以像不在域名列表中的端口发送url请求，例如微信的登录url<br>必须去访问本服务器的后端，通过本服务器的后端做中转站像微信的后端去发送url请 微信支付问题</p>
+<p>public class PayUtil {<br>private static Logger logger &#x3D; Logger.getLogger(“com.wade.common.utils.payUtils.PayUtil”);</p>
+<pre><code>public static Map&lt;String, String&gt; wxPay(String openid, HttpServletRequest request) &#123;
+    JSONObject json = new JSONObject();
+    SortedMap&lt;String, String&gt; packages = new TreeMap&lt;&gt;();
+    try &#123;
+        //生成的随机字符串
+        String nonce_str = Util.getRandomStringByLength(16);
+        //商品名称
+        String body = WXConst.body;
+        //获取本机的ip地址
+        String spbill_create_ip = Util.getIpAddr(request);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(&quot;yyyyMMddHHmmss&quot;);
+        String dataStr = dateFormat.format(new Date());
+        String orderNo = &quot;QM&quot; + dataStr + &quot;-&quot; + Util.getRandomStringByLength(6);
+        String money = WXConst.MONEY;//支付金额，单位：分，这边需要转成字符串类型，否则后面的签名会失败
+        SortedMap&lt;String, String&gt; packageParams = new TreeMap&lt;&gt;();
+        packageParams.put(&quot;appid&quot;, WXConst.appId);
+        packageParams.put(&quot;nonce_str&quot;, nonce_str);
+        packageParams.put(&quot;mch_id&quot;, WXConst.mch_id);
+        packageParams.put(&quot;body&quot;, body);
+        packageParams.put(&quot;out_trade_no&quot;, orderNo);//商户订单号
+        packageParams.put(&quot;total_fee&quot;, money);
+        packageParams.put(&quot;spbill_create_ip&quot;, spbill_create_ip);
+        packageParams.put(&quot;notify_url&quot;, WXConst.notify_url);
+        packageParams.put(&quot;trade_type&quot;, WXConst.TRADETYPE);
+        packageParams.put(&quot;openid&quot;, openid);
+        packageParams.put(&quot;sign&quot;, createSign(packageParams, WXConst.key));
+
+        //调用统一下单接口，并接受返回的结果
+        String result = PayUtil.httpRequest(WXConst.pay_url, &quot;POST&quot;, getRequestXml(packageParams));
+        System.out.println(&quot;调试模式_统一下单接口 返回XML数据：&quot; + result);
+        // 将解析结果存储在HashMap中
+        Map&lt;String, String&gt; map = PayUtil.doXMLParse(result);
+        String return_code = (String) map.get(&quot;return_code&quot;);//返回状态码
+
+        //返回给移动端需要的参数
+        if (return_code == &quot;SUCCESS&quot; || return_code.equals(return_code)) &#123;
+            packages.put(&quot;appId&quot;, map.get(&quot;appid&quot;));
+            packages.put(&quot;timeStamp&quot;, String.valueOf(System.currentTimeMillis() / 1000));
+            packages.put(&quot;nonceStr&quot;, map.get(&quot;nonce_str&quot;));
+            packages.put(&quot;signType&quot;, &quot;MD5&quot;);
+            packages.put(&quot;package&quot;, &quot;prepay_id=&quot; + map.get(&quot;prepay_id&quot;));
+            packages.put(&quot;paySign&quot;, createSign(packages, WXConst.key));
+        &#125;
+
+        logger.info(&quot; 第二次 : sign:&quot; + packages.get(&quot;paySign&quot;));
+
+    &#125; catch (Exception e) &#123;
+        e.printStackTrace();
+        json.put(&quot;errMsg&quot;, &quot;Failed&quot;);
+    &#125;
+    return packages;
+&#125;
+
+
+/**
+ * 获取请求xml
+ *
+ * @param packageParams 请求参数
+ * @return 请求xml
+ */
+public static String getRequestXml(SortedMap&lt;String, String&gt; packageParams) &#123;
+    StringBuilder sb = new StringBuilder();
+    sb.append(&quot;&lt;xml&gt;&quot;);
+    Set es = packageParams.entrySet();
+    for (Object e : es) &#123;
+        Map.Entry entry = (Map.Entry) e;
+        String key = (String) entry.getKey();
+        String value = (String) entry.getValue();
+        if (&quot;body&quot;.equalsIgnoreCase(key) || &quot;sign&quot;.equalsIgnoreCase(key)) &#123;
+            sb.append(&quot;&lt;&quot;).append(key).append(&quot;&gt;&quot;).append(&quot;&lt;![CDATA[&quot;).append(value).append(&quot;]]&gt;&lt;/&quot;).append(key).append(&quot;&gt;&quot;);
+        &#125; else &#123;
+            sb.append(&quot;&lt;&quot;).append(key).append(&quot;&gt;&quot;).append(value).append(&quot;&lt;/&quot;).append(key).append(&quot;&gt;&quot;);
+        &#125;
+    &#125;
+    sb.append(&quot;&lt;/xml&gt;&quot;);
+    return sb.toString();
+&#125;
+
+
+public static String createSign(SortedMap&lt;String, String&gt; packageParams, String apiKey) &#123;
+
+    StringBuilder sb = new StringBuilder();
+    Set es = packageParams.entrySet();
+    for (Object e : es) &#123;
+        Map.Entry entry = (Map.Entry) e;
+        String k = (String) entry.getKey();
+        String v = (String) entry.getValue();
+        if ((v != null) &amp;&amp; (!&quot;&quot;.equals(v)) &amp;&amp; (!&quot;sign&quot;.equals(k)) &amp;&amp;
+                (!&quot;key&quot;.equals(k))) &#123;
+            sb.append(k).append(&quot;=&quot;).append(v).append(&quot;&amp;&quot;);
+        &#125;
+    &#125;
+    sb.append(&quot;key=&quot;).append(apiKey);
+    System.err.println(apiKey + &quot;apiKey&quot;);
+    System.err.println(sb.toString() + &quot;sb.toString()&quot;);
+    String sign = MD5Utils.getInstance().createMd5(sb.toString())
+            .toUpperCase();
+    System.err.println(sign + &quot;sign()&quot;);
+    return sign;
+
+&#125;
+
+
+/**
+ * 签名字符串
+ *
+ * @param text          需要签名的字符串
+ * @param key           密钥
+ * @param input_charset 编码格式
+ * @return 签名结果
+ */
+public static String sign(String text, String key, String input_charset) &#123;
+    text = text + &quot;&amp;key=&quot; + key;
+    return DigestUtils.md5Hex(getContentBytes(text, input_charset));
+&#125;
+
+/**
+ * 签名字符串
+ *
+ * @param text          需要签名的字符串
+ * @param sign          签名结果
+ * @param key           密钥
+ * @param input_charset 编码格式
+ * @return 签名结果
+ */
+public static boolean verify(String text, String sign, String key, String input_charset) &#123;
+    text = text + key;
+    String mysign = DigestUtils.md5Hex(getContentBytes(text, input_charset));
+    if (mysign.equals(sign)) &#123;
+        return true;
+    &#125; else &#123;
+        return false;
+    &#125;
+&#125;
+
+/**
+ * @param content
+ * @param charset
+ * @return
+ * @throws UnsupportedEncodingException
+ */
+public static byte[] getContentBytes(String content, String charset) &#123;
+    if (charset == null || &quot;&quot;.equals(charset)) &#123;
+        return content.getBytes();
+    &#125;
+    try &#123;
+        return content.getBytes(charset);
+    &#125; catch (UnsupportedEncodingException e) &#123;
+        throw new RuntimeException(&quot;MD5签名过程中出现错误,指定的编码集不对,您目前指定的编码集是:&quot; + charset);
+    &#125;
+&#125;
+
+/**
+ * 生成6位或10位随机数 param codeLength(多少位)
+ *
+ * @return
+ */
+public static String createCode(int codeLength) &#123;
+    String code = &quot;&quot;;
+    for (int i = 0; i &lt; codeLength; i++) &#123;
+        code += (int) (Math.random() * 9);
+    &#125;
+    return code;
+&#125;
+
+@SuppressWarnings(&quot;unused&quot;)
+private static boolean isValidChar(char ch) &#123;
+    if ((ch &gt;= &#39;0&#39; &amp;&amp; ch &lt;= &#39;9&#39;) || (ch &gt;= &#39;A&#39; &amp;&amp; ch &lt;= &#39;Z&#39;) || (ch &gt;= &#39;a&#39; &amp;&amp; ch &lt;= &#39;z&#39;))
+        return true;
+    if ((ch &gt;= 0x4e00 &amp;&amp; ch &lt;= 0x7fff) || (ch &gt;= 0x8000 &amp;&amp; ch &lt;= 0x952f))
+        return true;// 简体中文汉字编码
+    return false;
+&#125;
+
+/**
+ * 除去数组中的空值和签名参数
+ *
+ * @param sArray 签名参数组
+ * @return 去掉空值与签名参数后的新签名参数组
+ */
+public static Map&lt;String, String&gt; paraFilter(Map&lt;String, String&gt; sArray) &#123;
+    Map&lt;String, String&gt; result = new HashMap&lt;String, String&gt;();
+    if (sArray == null || sArray.size() &lt;= 0) &#123;
+        return result;
+    &#125;
+    for (String key : sArray.keySet()) &#123;
+        String value = sArray.get(key);
+        if (value == null || value.equals(&quot;&quot;) || key.equalsIgnoreCase(&quot;sign&quot;)
+                || key.equalsIgnoreCase(&quot;sign_type&quot;)) &#123;
+            continue;
+        &#125;
+        result.put(key, value);
+    &#125;
+    return result;
+&#125;
+
+/**
+ * 把数组所有元素排序，并按照“参数=参数值”的模式用“&amp;”字符拼接成字符串
+ *
+ * @param params 需要排序并参与字符拼接的参数组
+ * @return 拼接后字符串
+ */
+public static String createLinkString(Map&lt;String, String&gt; params) &#123;
+    List&lt;String&gt; keys = new ArrayList&lt;String&gt;(params.keySet());
+    Collections.sort(keys);
+    String prestr = &quot;&quot;;
+    for (int i = 0; i &lt; keys.size(); i++) &#123;
+        String key = keys.get(i);
+        String value = params.get(key);
+        if (i == keys.size() - 1) &#123;// 拼接时，不包括最后一个&amp;字符
+            prestr = prestr + key + &quot;=&quot; + value;
+        &#125; else &#123;
+            prestr = prestr + key + &quot;=&quot; + value + &quot;&amp;&quot;;
+        &#125;
+    &#125;
+    return prestr;
+&#125;
+
+/**
+ * @param requestUrl    请求地址
+ * @param requestMethod 请求方法
+ * @param outputStr     参数
+ */
+public static String httpRequest(String requestUrl, String requestMethod, String outputStr) &#123;
+    // 创建SSLContext
+    StringBuffer buffer = null;
+    try &#123;
+        URL url = new URL(requestUrl);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod(requestMethod);
+        conn.setDoOutput(true);
+        conn.setDoInput(true);
+        conn.connect();
+        //往服务器端写内容
+        if (null != outputStr) &#123;
+            OutputStream os = conn.getOutputStream();
+            os.write(outputStr.getBytes(&quot;utf-8&quot;));
+            os.close();
+        &#125;
+        // 读取服务器端返回的内容
+        InputStream is = conn.getInputStream();
+        InputStreamReader isr = new InputStreamReader(is, &quot;utf-8&quot;);
+        BufferedReader br = new BufferedReader(isr);
+        buffer = new StringBuffer();
+        String line = null;
+        while ((line = br.readLine()) != null) &#123;
+            buffer.append(line);
+        &#125;
+        br.close();
+    &#125; catch (Exception e) &#123;
+        e.printStackTrace();
+    &#125;
+    return buffer.toString();
+&#125;
+
+public static String urlEncodeUTF8(String source) &#123;
+    String result = source;
+    try &#123;
+        result = java.net.URLEncoder.encode(source, &quot;UTF-8&quot;);
+    &#125; catch (UnsupportedEncodingException e) &#123;
+        // TODO Auto-generated catch block
+        e.printStackTrace();
+    &#125;
+    return result;
+&#125;
+
+/**
+ * 解析xml,返回第一级元素键值对。如果第一级元素有子节点，则此节点的值是子节点的xml数据。
+ *
+ * @param strxml
+ * @return
+ * @throws IOException
+ */
+public static Map&lt;String, String&gt; doXMLParse(String strxml) throws Exception &#123;
+    if (null == strxml || &quot;&quot;.equals(strxml)) &#123;
+        return null;
+    &#125;
+
+    Map&lt;String, String&gt; m = new HashMap();
+    InputStream in = String2Inputstream(strxml);
+    SAXBuilder builder = new SAXBuilder();
+    Document doc = builder.build(in);
+    Element root = doc.getRootElement();
+    List list = root.getChildren();
+    Iterator it = list.iterator();
+    while (it.hasNext()) &#123;
+        Element e = (Element) it.next();
+        String k = e.getName();
+        String v = &quot;&quot;;
+        List children = e.getChildren();
+        if (children.isEmpty()) &#123;
+            v = e.getTextNormalize();
+        &#125; else &#123;
+            v = getChildrenText(children);
+        &#125;
+
+        m.put(k, v);
+    &#125;
+</code></pre>
+<p>&#x2F;&#x2F;关闭流<br>in.close();</p>
+<pre><code>    return m;
+&#125;
+
+/**
+ * 获取子结点的xml
+ *
+ * @param children
+ * @return String
+ */
+public static String getChildrenText(List children) &#123;
+    StringBuffer sb = new StringBuffer();
+    if (!children.isEmpty()) &#123;
+        Iterator it = children.iterator();
+        while (it.hasNext()) &#123;
+            Element e = (Element) it.next();
+            String name = e.getName();
+            String value = e.getTextNormalize();
+            List list = e.getChildren();
+            sb.append(&quot;&lt;&quot; + name + &quot;&gt;&quot;);
+            if (!list.isEmpty()) &#123;
+                sb.append(getChildrenText(list));
+            &#125;
+            sb.append(value);
+            sb.append(&quot;&lt;/&quot; + name + &quot;&gt;&quot;);
+        &#125;
+    &#125;
+
+    return sb.toString();
+&#125;
+
+public static InputStream String2Inputstream(String str) &#123;
+    return new ByteArrayInputStream(str.getBytes());
+&#125;
+
+
+public static void wxNotify(HttpServletRequest request, HttpServletResponse response) throws Exception &#123;
+    BufferedReader br = new BufferedReader(new InputStreamReader((ServletInputStream) request.getInputStream()));
+    String line = null;
+    StringBuilder sb = new StringBuilder();
+    while ((line = br.readLine()) != null) &#123;
+        sb.append(line);
+    &#125;
+    br.close();
+    //sb为微信返回的xml
+    String notityXml = sb.toString();
+    String resXml = &quot;&quot;;
+    System.out.println(&quot;接收到的报文：&quot; + notityXml);
+
+
+    Map map = PayUtil.doXMLParse(notityXml);
+
+
+    String returnCode = (String) map.get(&quot;return_code&quot;);
+    if (&quot;SUCCESS&quot;.equals(returnCode)) &#123;
+        //验证签名是否正确
+        if (PayUtil.verify(PayUtil.createLinkString(map), (String) map.get(&quot;sign&quot;), WXConst.key, &quot;utf-8&quot;)) &#123;
+            /**此处添加自己的业务逻辑代码start**/
+
+
+            /**此处添加自己的业务逻辑代码end**/
+
+
+            //通知微信服务器已经支付成功
+            resXml = &quot;&lt;xml&gt;&quot; + &quot;&lt;return_code&gt;&lt;![CDATA[SUCCESS]]&gt;&lt;/return_code&gt;&quot;
+                    + &quot;&lt;return_msg&gt;&lt;![CDATA[OK]]&gt;&lt;/return_msg&gt;&quot; + &quot;&lt;/xml&gt; &quot;;
+        &#125;
+    &#125; else &#123;
+        resXml = &quot;&lt;xml&gt;&quot; + &quot;&lt;return_code&gt;&lt;![CDATA[FAIL]]&gt;&lt;/return_code&gt;&quot;
+                + &quot;&lt;return_msg&gt;&lt;![CDATA[报文为空]]&gt;&lt;/return_msg&gt;&quot; + &quot;&lt;/xml&gt; &quot;;
+    &#125;
+    System.out.println(resXml);
+    System.out.println(&quot;微信支付回调数据结束&quot;);
+
+
+    BufferedOutputStream out = new BufferedOutputStream(
+            response.getOutputStream());
+    out.write(resXml.getBytes());
+    out.flush();
+    out.close();
+&#125;
+</code></pre>
+<p>}<br>授权获取用户信息转换手机号</p>
+<pre><code>public String getWxLogin(String code) &#123;
+    WxBaseConst baseConst = new WxBaseConst(&quot;你的appid&quot;, &quot;你的密钥（微信公众平台中生成的）&quot;, code, &quot;authorization_code&quot;);
+    String params = &quot;appid=&quot; + baseConst.getAppid() + &quot;&amp;secret=&quot; + baseConst.getSecret() + &quot;&amp;js_code=&quot; + baseConst.getJs_code() + &quot;&amp;grant_type=&quot; + baseConst.getGrant_type();
+    return HttpUtils.sendGet(&quot;https://api.weixin.qq.com/sns/jscode2session&quot;, params);
+&#125;
+</code></pre>
+<p>&#x2F;&#x2F; 获取授权手机号</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line">handleGetPhoneNumber: function (event) &#123;</span><br><span class="line">	console.log(<span class="string">&quot;event&quot;</span>, event);</span><br><span class="line">	<span class="type">var</span> <span class="variable">that</span> <span class="operator">=</span> <span class="built_in">this</span>;</span><br><span class="line">	wx.login(&#123;</span><br><span class="line">			success: function (res) &#123;</span><br><span class="line">		<span class="keyword">if</span> (res.code) &#123;</span><br><span class="line">			<span class="comment">// 登录凭证（code）获取成功，可以将code发送到后端进行处理</span></span><br><span class="line">			<span class="type">var</span> <span class="variable">code</span> <span class="operator">=</span> res.code;</span><br><span class="line">			wx.request(&#123;</span><br><span class="line">					url: `$&#123;apiUrl&#125;` + <span class="string">&#x27;/orderMiniProgram/wxLogin?code=&#x27;</span> + code,</span><br><span class="line">					method: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">					success: function (res) &#123;</span><br><span class="line">                           <span class="type">const</span> <span class="variable">sessionKey</span> <span class="operator">=</span> JSON.parse(res.data.msg).session_key;</span><br><span class="line">                           <span class="type">const</span> <span class="variable">openid</span> <span class="operator">=</span> JSON.parse(res.data.msg).openid;</span><br><span class="line">				<span class="keyword">if</span> (Object.keys(event).length !== <span class="number">0</span>) &#123;</span><br><span class="line">					<span class="keyword">if</span> (event.detail.errMsg === <span class="string">&#x27;getPhoneNumber:ok&#x27;</span>) &#123;</span><br><span class="line">						<span class="type">var</span> <span class="variable">encryptedData</span> <span class="operator">=</span> event.detail.encryptedData;</span><br><span class="line">						<span class="type">var</span> <span class="variable">iv</span> <span class="operator">=</span> event.detail.iv;</span><br><span class="line">						that.data.form.iv = iv;</span><br><span class="line">						that.data.form.encryptedData = encryptedData</span><br><span class="line">						that.setData(&#123;</span><br><span class="line">								isAuthorized: <span class="literal">true</span></span><br><span class="line">                                   &#125;);</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="comment">// openid获取成功，可以在这里处理逻辑</span></span><br><span class="line">				app.openid = openid;</span><br><span class="line">				that.data.form.openid = res.data.openid;</span><br><span class="line">				that.data.form.sessionKey = sessionKey;</span><br><span class="line">                           <span class="type">const</span> <span class="variable">pc</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">RdWXBizDataCrypt</span>(<span class="string">&quot;你的小程序appid&quot;</span>, sessionKey);</span><br><span class="line">                           <span class="type">const</span> <span class="variable">phone</span> <span class="operator">=</span> pc.decryptData(encryptedData, iv);</span><br><span class="line">				<span class="keyword">if</span> (phone == <span class="literal">null</span>) &#123;</span><br><span class="line">					that.handleGetPhoneNumber;</span><br><span class="line">					that.setData(&#123;</span><br><span class="line">							isAuthorized: <span class="literal">false</span></span><br><span class="line">                               &#125;)</span><br><span class="line">					that.onAuthorizationCancel</span><br><span class="line">					wx.showToast(&#123;</span><br><span class="line">							title: <span class="string">&#x27;授权发生意外请重新授权&#x27;</span>,</span><br><span class="line">							icon: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">							duration: <span class="number">2000</span></span><br><span class="line">                               &#125;);</span><br><span class="line">				&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">					that.data.form.phoneNumber = phone.phoneNumber;</span><br><span class="line">					getApp().globalData.AuthToken = phone.phoneNumber;</span><br><span class="line">					wx.showToast(&#123;</span><br><span class="line">							title: <span class="string">&#x27;授权成功&#x27;</span>,</span><br><span class="line">							icon: <span class="string">&#x27;none&#x27;</span>,</span><br><span class="line">							duration: <span class="number">2000</span></span><br><span class="line">                               &#125;);</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;,</span><br><span class="line">			fail: function (res) &#123;</span><br><span class="line">				console.log(<span class="string">&#x27;Response:&#x27;</span>, res);</span><br><span class="line">				<span class="comment">// openid获取失败，可以在这里处理逻辑</span></span><br><span class="line">				console.log(<span class="string">&#x27;Failed to get openid&#x27;</span>);</span><br><span class="line">			&#125;</span><br><span class="line">                   &#125;);</span><br><span class="line">		&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">			<span class="comment">// 登录凭证（code）获取失败，可以在这里处理逻辑</span></span><br><span class="line">			console.log(<span class="string">&#x27;Failed to get login code&#x27;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">       &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">小程序和微信公众号unionID获取</span><br><span class="line">小程序的openid获取与公众号的openid获取是一样的道理</span><br><span class="line">获取token---&gt;获取openid</span><br><span class="line">    unionID的获取</span><br><span class="line">    网上说的： 小程序的openid==小程序的unionID （错误说法）</span><br><span class="line">    ！！注意！！在获取unionId的前提是关联二者</span><br><span class="line">    unionID是在同一个微信开放平台下绑定关联的多个程序/公众号 的唯一标识。</span><br><span class="line">    小程序unionID获取：</span><br><span class="line">    比较简单 ：调用wx.login 获取code,</span><br><span class="line">    调用jscode2Session方法获取unionID</span><br><span class="line">    HttpUtils.sendGet(<span class="string">&quot;https://api.weixin.qq.com/sns/jscode2session&quot;</span>, miniParams)</span><br><span class="line">    公众号unionID获取：</span><br><span class="line">    分四步：   </span><br><span class="line">    获取公众号Token</span><br><span class="line">    HttpUtils.sendGet(<span class="string">&quot;https://api.weixin.qq.com/cgi-bin/token&quot;</span>, tokenParams)</span><br><span class="line">    通过Token获取openid（List 这里拿到的openid是关注微信公众号的所有人的openid）</span><br><span class="line">    HttpUtils.sendGet(<span class="string">&quot;https://api.weixin.qq.com/cgi-bin/user/get&quot;</span>, openIdParams)</span><br><span class="line">    通过遍历openid获取unionId</span><br><span class="line">    openidArray.forEach(openid -&gt; &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">params</span> <span class="operator">=</span> <span class="string">&quot;access_token=&quot;</span> + token + <span class="string">&quot;&amp;openid=&quot;</span> + openid + <span class="string">&quot;&amp;lang=zh_CN&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">userInfo</span> <span class="operator">=</span> HttpUtils.sendGet(<span class="string">&quot;https://api.weixin.qq.com/cgi-bin/user/info&quot;</span>, params);</span><br><span class="line">    <span class="type">String</span> <span class="variable">unionIdOfficial</span> <span class="operator">=</span> ((JSONObject) JSONObject.parse(userInfo)).get(<span class="string">&quot;unionid&quot;</span>).toString();</span><br><span class="line">    这里对比小程序的unionId是否与公众号unionID相等 相等就可以进行存储关联等操作</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://concaxu.github.io">Conca Xu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://concaxu.github.io/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/">https://concaxu.github.io/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://concaxu.github.io" target="_blank">ConcaXu</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">小程序</a></div><div class="post_share"><div class="social-share" data-image="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://jsdelivr.pai233.top/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://jsdelivr.pai233.top/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/" title="微信SDK"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">微信SDK</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Conca Xu</div><div class="author-info__description">This is Conca Xu</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ConcaXu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/" title="小程序BUG记录">小程序BUG记录</a><time datetime="2024-07-31T13:09:53.000Z" title="发表于 2024-07-31 21:09:53">2024-07-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/" title="微信SDK">微信SDK</a><time datetime="2024-07-31T12:59:03.000Z" title="发表于 2024-07-31 20:59:03">2024-07-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/31/Hexo%E7%AC%94%E8%AE%B0/" title="Hexo笔记">Hexo笔记</a><time datetime="2024-07-31T12:33:19.000Z" title="发表于 2024-07-31 20:33:19">2024-07-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/18/YoloBaseNode/" title="YoloBaseNode">YoloBaseNode</a><time datetime="2024-07-18T06:38:36.000Z" title="发表于 2024-07-18 14:38:36">2024-07-18</time></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Conca Xu</div><div class="framework-info"><span>备案 </span><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">浙B2-20080101-4</a><span class="footer-separator">|</span><span>备案号 </span><a target="_blank" rel="noopener" href="https://beian.mps.gov.cn/#/">浙公网安备 33010602009975号</a></div><div class="footer_custom_text">This is ConcaXu</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://jsdelivr.pai233.top/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
