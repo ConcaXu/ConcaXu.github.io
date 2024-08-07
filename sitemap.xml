@@ -90,14 +90,7 @@
   </url>
   
   <url>
-    <loc>https://concaxu.github.io/tags/Java/</loc>
-    <lastmod>2024-08-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://concaxu.github.io/tags/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/</loc>
+    <loc>https://concaxu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -118,7 +111,7 @@
   </url>
   
   <url>
-    <loc>https://concaxu.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <loc>https://concaxu.github.io/tags/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/</loc>
     <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -126,6 +119,13 @@
   
   <url>
     <loc>https://concaxu.github.io/tags/%E5%BE%AE%E4%BF%A1SDK/</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://concaxu.github.io/tags/Java/</loc>
     <lastmod>2024-08-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
