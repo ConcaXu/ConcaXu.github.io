@@ -1,215 +1,762 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>随想录</title><meta name="author" content="Conca Xu"><meta name="copyright" content="Conca Xu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="This is Conca Xu">
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="x5-fullscreen" content="true">
+<meta name="full-screen" content="yes">
+<meta name="theme-color" content="#317EFB" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
+<meta name="description" content="This is Conca Xu">
 <meta property="og:type" content="website">
 <meta property="og:title" content="随想录">
 <meta property="og:url" content="https://concaxu.github.io/index.html">
 <meta property="og:site_name" content="随想录">
 <meta property="og:description" content="This is Conca Xu">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4">
 <meta property="article:author" content="Conca Xu">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://avatars.githubusercontent.com/u/71932317?s=400&u=83d5623cc2765fe5ff750187329448f1efc2b506&v=4"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://concaxu.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://jsdelivr.pai233.top/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://jsdelivr.pai233.top/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: '复制成功',
-    error: '复制错误',
-    noSupport: '浏览器不支持'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '天',
-  dateSuffix: {
-    just: '刚刚',
-    min: '分钟前',
-    hour: '小时前',
-    day: '天前',
-    month: '个月前'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://jsdelivr.pai233.top/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
-    buttonText: '加载更多'
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '随想录',
-  isPost: false,
-  isHome: true,
-  isHighlightShrink: false,
-  isToc: false,
-  postUpdate: '2024-08-19 23:21:37'
-}</script><script>(win=>{
-      win.saveToLocal = {
-        set: (key, value, ttl) => {
-          if (ttl === 0) return
-          const now = Date.now()
-          const expiry = now + ttl * 86400000
-          const item = {
-            value,
-            expiry
-          }
-          localStorage.setItem(key, JSON.stringify(item))
-        },
-      
-        get: key => {
-          const itemStr = localStorage.getItem(key)
-      
-          if (!itemStr) {
-            return undefined
-          }
-          const item = JSON.parse(itemStr)
-          const now = Date.now()
-      
-          if (now > item.expiry) {
-            localStorage.removeItem(key)
-            return undefined
-          }
-          return item.value
-        }
-      }
+
+
+<title >随想录</title>
+
+<!-- Favicon -->
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='16x16' ></link>
+
+
+    <link href='/img/favicon.svg?v=2.2.2' rel='icon' type='image/png' sizes='32x32' ></link>
+
+
+
+
+<!-- Plugin -->
+
+
+
+
     
-      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        script.onerror = reject
-        script.onload = script.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          script.onload = script.onreadystatechange = null
-          resolve()
-        }
+<link rel="stylesheet" href="/css/plugins/bootstrap.row.css">
 
-        Object.keys(attr).forEach(key => {
-          script.setAttribute(key, attr[key])
-        })
-
-        document.head.appendChild(script)
-      })
     
-      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onerror = reject
-        link.onload = link.onreadystatechange = function() {
-          const loadState = this.readyState
-          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-          link.onload = link.onreadystatechange = null
-          resolve()
-        }
-        document.head.appendChild(link)
-      })
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.css">
+
     
-      win.activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
     
-        if (t === 'dark') activateDarkMode()
-        else if (t === 'light') activateLightMode()
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
+
+
+
+
+<!-- Icon -->
+
     
-      const detectApple = () => {
-        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-          document.documentElement.classList.add('apple')
-        }
-      }
-      detectApple()
-    })(window)</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/pool.min.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="随想录" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> link</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://haowallpaper.com/link/common/file/previewFileImg/15189043253972288')"><nav id="nav"><span id="blog-info"><a href="/" title="随想录"><span class="site-name">随想录</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">随想录</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/19/8%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" title="8月份打工日记">8月份打工日记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-19T11:54:54.000Z" title="发表于 2024-08-19 19:54:54">2024-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/">打工日记</a></span></div><div class="content">康熙字典API接口123先把康熙字典 api 接入系统，或者是源码接入系统。作为 p0，这样就可以自己查询五行。增加康熙笔画的框选任务量：API的寻找（尝试使用开源 但是满足不了需求），于是自己写脚本借鉴抓取了康熙大帝的数据库接入后目前使用在字库中，可以看到康熙字画、简笔画、五行等
+<link rel="stylesheet" href="/css/plugins/font-awesome.min.css">
 
-写字机二代12345678第一代采用的是websocket通信,python端采用队列进行存储任务。由于写字机不给力经常挂掉，导致第一代软件需要重启导致队列订单丢失。新需求：想要加急订单、想在web看到写字机的任务列表由于队列的形式无法满足现在的要求所以有了写字机第二代。新型版本：    采用数据库存储订单防止订单丢失，下多少都可以 反正不会丢。    支持编辑订单加急、切换写字机（为后续多台写字机做铺垫）    可以看到订单的实时状态：写字中、卡纸异常、排队中    之前的订单如果写完但是机器异常了没拍照上传需要重新写，现在支持手动拍照上传，节约成本
 
-字库生成名固定字无五行12之前的字库生成名客户指定固定字是没有这个字的五行的策划不知道五行所有增加了这么一个功能，指定字也去查询这个字的五行插入拼接在字 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" title="设计模式之代理模式">设计模式之代理模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-13T14:28:58.000Z" title="发表于 2024-08-13 22:28:58">2024-08-13</time></span></div><div class="content">设计模式之代理模式定义1代理模式（Proxy）：为其他对象提供一种代理以控制对这个对象的访问
 
-应用场景12341:远程代理：为一个对象在不同的地址空间提供局部代表。这样可以隐藏一个对象存在于不同地址空间的事实2:虚拟代理:根据需要创建开销很大的对象。通过它来存放实例化需要很长时间的真实对象3:安全代理:用来控制真是对象访问时的权限4:智能指引:当调用真实的对象时，代理处理另外一些事
 
-代码解释 代理表白为别人做嫁衣12345678910Confession 接口: 定义了 confess() 方法,这是表白的抽象行为。RealConfessor 类: 实际表白者,实现了直接表白的行为。ProxyConfessor 类: 代理表白者(朋友),它持有一个 RealConfessor 的引用。    在 confess() 方法中,它首先介绍自己的角色。然后调用实际表白者的 confess() 方法。最后,还会添加一些额外的信息来支持表白。ProxyConfessionDemo 类:客户端代码,展示了如何使用代理表白。使用特点：    控制访问:代理在实际表白前后添加了额外的行为。     ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%85%8D%E8%80%85%E6%A8%A1%E5%BC%8F/" title="设计模式之装饰模式">设计模式之装饰模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-12T14:39:59.000Z" title="发表于 2024-08-12 22:39:59">2024-08-12</time></span></div><div class="content">设计模式之装饰模式定义123装饰模式(Decorator Pattern): 动态的给一个对象添加一些额外的职责，就增加功能来说，装饰模式比生成子类更为灵活。注：装饰模式是利用SetComponent 来对对象进行包装的，不需要关心如何被添加到对象链种。个人理解：就是将一些额外的功能独立出来
+<!-- Variable -->
+<script>window.ASYNC_CONFIG = {"hostname":"concaxu.github.io","author":"Conca Xu","root":"/","typed_text":null,"theme_version":"2.2.2","theme":"async","favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","apple_touch_icon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","show_text":"(/≧▽≦/)咦！又好了！","hide_text":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"danmu":{"enable":false,"el":".trm-banner"}};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":true,"postUpdate":"2024-08-19 23:30:28"};</script>
 
-优点123可以在不修改现有代码的情况下，动态地添加新功能。可以将多个装饰器组合使用，以实现更复杂的功能组合。遵循开闭原则，对扩展开放，对修改关闭
+<!-- Theme mode css -->
+<link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.2.2" id="trm-switch-style">
+<script>
+    let defaultMode = ASYNC_CONFIG.theme.default !=='auto' ?  ASYNC_CONFIG.theme.default : (window.matchMedia("(prefers-color-scheme: light)").matches ? 'style-light' : 'style-dark')
+    let catchMode = localStorage.getItem('theme-mode') || defaultMode;
+    let type = catchMode === 'style-dark' ? 'add' : 'remove';
+    document.documentElement.classList[type]('dark')
+</script>
 
-代码解释12345Coffee 接口定义了基本的组件接口，包含 getCost() 和 getDescription() 方法。SimpleCoffee 类是具体组件，实现了 Coffee 接口。CoffeeDecorator 是一个抽象装饰器类，它也实现了 Coffee 接口，并持有一个 Coffee 对象。MilkDecorator 和 SugarDecorator 是具体的装饰器，它们扩展了 CoffeeDecorator，并在原有咖啡的基础上添加了新的行为（增加成本和描述）。在 main 方法中，我们展示了如何使用这些装饰器来动态地创建不同种 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99/" title="设计模式之依赖倒转原则">设计模式之依赖倒转原则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-08T15:33:58.000Z" title="发表于 2024-08-08 23:33:58">2024-08-08</time></span></div><div class="content">设计模式之依赖倒转原则定义123依赖倒转原则：抽象不应该依赖细节，细节更应该依赖抽象。// 说白了就是要针对接口变成，不要对现实编程。官方解释：高层模块不应该依赖于低层模块，两者都应该依赖于抽象；抽象不应该依赖于细节，细节应该依赖于抽象。通过依赖抽象（如接口或抽象类）而不是具体实现，代码可以更灵活和易于维护
+<!-- CDN -->
 
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950public class Main &#123;    // 高层模块    static class Application &#123;        private final MessageService messageService;        // 通过依赖注入的方式，使得高层模块依赖于抽象接口而不是具体实现        public Application(MessageService messageService) &#123;            this.messageSe ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99/" title="设计模式之开放封闭原则">设计模式之开放封闭原则</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-07T15:15:03.000Z" title="发表于 2024-08-07 23:15:03">2024-08-07</time></span></div><div class="content">设计模式之开放封闭原则定义123开放-封闭原则：是说软件实体（类、模块、函数等等）应该可以扩展，但是不可修改。【ASD】// 对于扩展是开放的,对于更改是封闭的。在开发过程中面对需求，对程序的改动是通过增加新代码进行的额，而不是更改现有的代码。// 有点像一国两制，对于大陆来说社会主义是不可改变的，对于香港来说长期在殖民统治进行彻底的变化是不现实的。
 
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657import java.util.List;// 抽象形状接口interface Shape &#123;    double area();&#125;// 矩形类class Rectangle implements Shape &#123;    private double width;    private double height;    public Rectangle(double width, double he ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E6%A8%A1%E5%BC%8F/" title="设计模式之单一职责模式">设计模式之单一职责模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-07T14:31:48.000Z" title="发表于 2024-08-07 22:31:48">2024-08-07</time></span></div><div class="content">设计模式之单一职责模式12// 单一职责模式顾名思义就是一个类尽量保证只有一个职责。比如生活中相机只用来拍照、MP3只用来听歌。当我们把这些功能如果放在一起的话 就会变得很复杂。代码也一样 会导致代码维护困难。牵一发而动全身。// 手机的发展有他自己的特点：然而编程时，我们却是要在类的职责分离上多思考，做到单一职责，这样的代码才是真正的以维护、易扩展、易复用、灵活多样。
+    
+    
 
-例子
-员工薪资计算&#x2F;&#x2F; 构建一个员工类
-12345678910111213141516171819202122232425262728public class Employee &#123;    private String id;    private String name;    private double salary;    public Employee(String id, String name, double salary) &#123;        this.id = id;        this.name = name;        this.salary = sa ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" title="设计模式之简单工厂模式">设计模式之简单工厂模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-02T07:26:35.000Z" title="发表于 2024-08-02 15:26:35">2024-08-02</time></span></div><div class="content">设计模式之简单工厂模式优点1// 包含了必要的 `逻辑判断` 根据外部信息决定究竟应该创建那个具体类的对象。通过使用简单的工厂模式，用户无需了解对象如何创建的，只需要传入必要的信息就可以了
 
-缺点12// 工厂类集中了所有实例的创建逻辑，违背了高内聚责任分配原则。随着系统中具体产品类不断增多，势必要不断修改工厂类，不易维护和扩展。也违背了开放封闭原则。// 注：开放封闭原则：一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。
 
-例子实现一个计算器
-&#x2F;&#x2F; 构建一个抽象父类
-123456// Product 角色，所有实例所共有的公共接口abstract class Operation &#123;    public int numA;    public int numB;    public abstract int GetResult();&#125;
+<!-- Site Analytics -->
 
-&#x2F;&#x2F; 构建实现类。具体产品角色，实现 Product 中的接口
-123456789101112131415161718192021222324252627282930313233343 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/08/01/7%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" title="7月份打工日记">7月份打工日记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-08-01T08:16:25.000Z" title="发表于 2024-08-01 16:16:25">2024-08-01</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/">打工日记</a></span></div><div class="content">自动化写字机1234567采用Python写的自动化程序，打开自动写字机操作。    1：Java服务端的模板内容的替换    2：Java与Python的连接选型（WebSocket）    3：Python读取Java发送的信号 写字模板    4：Python替换脚本成功后执行模拟点击写字程序。    5：写字完成后调用摄像头拍照，Java服务端接受Base64照片 上传存储至订单    其他：笔的选型、打印机的调试（打孔）、摄像机的位置、与瑞鑫联调测试。
+ 
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="随想录" type="application/atom+xml">
+</head>
 
-登录采用手机号验证码登录123456新增手机号验证码登录逻辑	1：阿里云验证码模板申请、资质认证    2：代码逻辑的新增（内网外网的校验）    	2-1:写了一个vbs程序向服务器发送请求判断是内网还是外网    3：验证码的发送    4：验证码Redis保存、校验
+<body>
 
-接入企业微信的投诉页面12345新增的投诉页面支持查看所有记录 以及用户进行投诉    1：创建企微BOT    2：找一个企微发送消息的模板、调用API    3：将用户投诉推送到企微中页面内容：订单号、描述、上传聊天记录、手机号等
+  <!-- app wrapper -->
+  <div class="trm-app-frame">
 
-自定义页面编辑1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/" title="小程序BUG记录">小程序BUG记录</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-31T13:09:53.000Z" title="发表于 2024-07-31 21:09:53">2024-07-31</time></span></div><div class="content">​域名非法问题小程序发布必须是合法的https域名 ，尽量是一级，二级域名证书小程序中的前端默认不可以像不在域名列表中的端口发送url请求，例如微信的登录url必须去访问本服务器的后端，通过本服务器的后端做中转站像微信的后端去发送url请 微信支付问题
-public class PayUtil {private static Logger logger &#x3D; Logger.getLogger(“com.wade.common.utils.payUtils.PayUtil”);
-public static Map&lt;String, String&gt; wxPay(String openid, HttpServletRequest request) &#123;
-    JSONObject json = new JSONObject();
-    SortedMap&lt;String, String&gt; packages = new TreeMap&lt;&gt;();
-    try &#123;
-        //生成的随机字符串
-        String  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/" title="微信SDK">微信SDK</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-31T12:59:03.000Z" title="发表于 2024-07-31 20:59:03">2024-07-31</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></span></div><div class="content">Web端调用微信sdk扫一扫功能常见问题
-没有调用成功摄像头？12345/** 我们使用的是wxsdk，那自然是只有在微信中才能打开喽。你要是在浏览器上打开那怎么调用摄像头（很蠢，自己一开始是在浏览器上测试的）* 另外看一下自己是否成功的鉴权了。如果密钥没错的话那就没问题* 另外注意参数的大小写问题哦*/
+    <!-- page preloader -->
+    <div class="trm-preloader">
+    <div class="trm-holder">
+        <div class="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+    <!-- page preloader end -->
 
-准备工作
-微信公众号订阅号即可 绑定自己的域名（JS接口安全域名），添加IP白名单、获取AppSecret
-在Java后端写一些Utils去向微信发送请求，以达到鉴权获取 ticket
+    <!-- change mode preloader -->
+    <div class="trm-mode-swich-animation-frame">
+    <div class="trm-mode-swich-animation">
+        <i class="i-sun"><i class="iconfont far fa-sun"></i></i>
+        <div class="trm-horizon"></div>
+        <i class="i-moon"><i class="iconfont far fa-moon"></i></i>
+    </div>
+</div>
+    <!-- change mode preloader end -->
 
-后端代码12public static final String TOKEN_URL = &quot;https://api.weixin.qq.com/cgi-bin/token&quot;;// 获取access_tokenpublic static final String TICKET_URL = &quot; https://api.weixin.qq.com/cgi-bin/ticket/getticket&quot;;// 拿到token以后获取ticket
-获取签名的接口
-1234 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://avatars.githubusercontent.com/u/71932317?s=400&amp;u=83d5623cc2765fe5ff750187329448f1efc2b506&amp;v=4" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Conca Xu</div><div class="author-info__description">This is Conca Xu</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ConcaXu"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/19/8%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" title="8月份打工日记">8月份打工日记</a><time datetime="2024-08-19T11:54:54.000Z" title="发表于 2024-08-19 19:54:54">2024-08-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" title="设计模式之代理模式">设计模式之代理模式</a><time datetime="2024-08-13T14:28:58.000Z" title="发表于 2024-08-13 22:28:58">2024-08-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%85%8D%E8%80%85%E6%A8%A1%E5%BC%8F/" title="设计模式之装饰模式">设计模式之装饰模式</a><time datetime="2024-08-12T14:39:59.000Z" title="发表于 2024-08-12 22:39:59">2024-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99/" title="设计模式之依赖倒转原则">设计模式之依赖倒转原则</a><time datetime="2024-08-08T15:33:58.000Z" title="发表于 2024-08-08 23:33:58">2024-08-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99/" title="设计模式之开放封闭原则">设计模式之开放封闭原则</a><time datetime="2024-08-07T15:15:03.000Z" title="发表于 2024-08-07 23:15:03">2024-08-07</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>分类</span>
+      <!-- scroll container -->
+      <div id="trm-dynamic-content" class="trm-swup-animation">
+        <div id="trm-scroll-container" class="trm-scroll-container" style="opacity: 0">
+            <!-- top bar -->
+            <header class="trm-top-bar">
+	<div class="container">
+		<div class="trm-left-side">
+			<!-- logo -->
+<a href="/" class="trm-logo-frame trm-anima-link">
+    
+        <img alt="logo" src="/img/favicon.svg">
+    
+    
+        <div class="trm-logo-text">
+            Async<span>Theme</span>
+        </div>
+    
+</a>
+<!-- logo end -->
+		</div>
+		<div class="trm-right-side">
+			<!-- menu -->
+<div class="trm-menu">
+    <nav>
+        <ul>
             
+            <li class="menu-item-has-children current-menu-item">
+                <a  href="/" target="">
+                    首页
+                </a>
+                
+            </li>
+            
+            <li class="menu-item-has-children ">
+                <a  href="/archives/" target="">
+                    归档
+                </a>
+                
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+<!-- menu end -->
+			
+			
+		</div>
+		<div class="trm-menu-btn">
+			<span></span>
+		</div>
+	</div>
+</header>
+            <!-- top bar end -->
+
+            <!-- body -->
+            <div class="trm-content-start">
+    <!-- banner -->
+    <div class="trm-banner">
+    
+    <!-- banner cover -->
+    <img style="object-position:top;object-fit:cover;" alt="banner" class="trm-banner-cover" src="/img/banner.png">
+    <!-- banner cover end -->
+    
+
+    <!-- banner content -->
+    <div class="trm-banner-content trm-overlay">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-4"></div>
+                
+                <div class="col-lg-8">
+
+                    <!-- banner title -->
+                    <div class="trm-banner-text ">
+                        <div class="trm-label trm-mb-20">
+                            Hi my new friend!
+                        </div>
+                        <h1 class="trm-mb-30 trm-hsmb-font">
+                            树深时见鹿，<br>溪午不闻钟。
+                        </h1>
+
+                        
+                            <ul class="trm-breadcrumbs trm-label">
+                                <li>
+                                    <a href="/" class="trm-anima-link">Home</a>
+                                </li>
+                                <li>
+                                    <span>
+                                        index.html
+                                    </span>
+                                </li>
+                            </ul>
+                        
+                    </div>
+                    <!-- banner title end -->
+
+                    <!-- scroll hint -->
+                    <span id="scroll-triger" class="trm-scroll-hint-frame">
+                        <div class="trm-scroll-hint"></div>
+                        <span class="trm-label">Scroll down</span>
+                    </span>
+                    <!-- scroll hint end -->
+
+                </div>
             </div>
-            <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"><span class="card-category-list-name">学习笔记</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/"><span class="card-category-list-name">打工日记</span><span class="card-category-list-count">2</span></a></li>
-            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 1.1em; color: #999">小程序</a> <a href="/tags/AI/" style="font-size: 1.1em; color: #999">AI</a> <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" style="font-size: 1.5em; color: #99a9bf">设计模式</a> <a href="/tags/Python/" style="font-size: 1.1em; color: #999">Python</a> <a href="/tags/%E5%BE%AE%E4%BF%A1SDK/" style="font-size: 1.1em; color: #999">微信SDK</a> <a href="/tags/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" style="font-size: 1.3em; color: #99a1ac">打工日记</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><span class="card-archive-list-count">8</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">七月 2024</span><span class="card-archive-list-count">4</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">12</div></div><div class="webinfo-item"><div class="item-name">已运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2024-08-19T15:21:37.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-08-19T15:21:37.300Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Conca Xu</div><div class="framework-info"><span>备案 </span><a target="_blank" rel="noopener" href="https://beian.miit.gov.cn/">粤ICP备2024289256号-1</a><span class="footer-separator"></span><!--span= _p('footer.theme') + ' '--><!--a(href='https://beian.mps.gov.cn/#/')= '粤ICP备2024289256号-1'--></div><div class="footer_custom_text">This is ConcaXu</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://jsdelivr.pai233.top/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/js/pool.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start -->
+        </div>
+    </div>
+    <!-- banner content end -->
+</div>
+    <!-- banner end -->
+    <div class="container">
+        <div class="row">
+            
+                <div class="trm-page-sidebar col-lg-4 hidden-sm">
+                    <!-- main card -->
+                    <div class="trm-main-card-frame trm-sidebar">
+    <div class="trm-main-card"> 
+        <!-- card header -->
+<div class="trm-mc-header">
+    <div class="trm-avatar-frame trm-mb-20">
+        <img alt="Avatar" class="trm-avatar" src="/img/avatar.jpg">
+    </div>
+    <h5 class="trm-name trm-mb-15">
+        ThemeAsync
+    </h5>
+    
+</div>
+<!-- card header end -->
+        <!-- sidebar social -->
+
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<div class="trm-social">
+    
+        <a href="https://github.com" title="Github" rel="nofollow" target="_blank">
+            <i class="iconfont fab fa-github"></i>
+        </a>
+    
+</div>
+
+<!-- sidebar social end -->
+        <!-- info -->
+<div class="trm-divider trm-mb-40 trm-mt-40"></div>
+<ul class="trm-table trm-mb-20">
+    
+        <li>
+            <div class="trm-label">
+                地址:
+            </div>
+            <div class="trm-label trm-label-light">
+                Mars
+            </div>
+        </li>
+    
+</ul>
+<!-- info end -->
+
+        
+    </div>
+</div>
+                    <!-- main card end -->
+                </div>
+            
+            <div class="trm-page-content col-lg-8">
+                <div id="trm-content" class="trm-content">
+                    <!-- categories -->
+
+    <div class="row hidden-sm">
+        
+        
+        <div class="col-lg-6">
+            <!-- categories card -->
+<div class="trm-blog-categories trm-scroll-animation">
+    <h6>
+        学习笔记
+        <span class="trm-number">
+            3
+        </span>
+    </h6>
+    <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+    <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/." class="trm-label">
+        查看分类 
+        <i class="iconfont fas fa-arrow-right arrow-right"></i>
+    </a>
+</div>
+<!-- categories card end -->
+        </div>
+        
+        <div class="col-lg-6">
+            <!-- categories card -->
+<div class="trm-blog-categories trm-scroll-animation">
+    <h6>
+        打工日记
+        <span class="trm-number">
+            2
+        </span>
+    </h6>
+    <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+    <a href="/categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/." class="trm-label">
+        查看分类 
+        <i class="iconfont fas fa-arrow-right arrow-right"></i>
+    </a>
+</div>
+<!-- categories card end -->
+        </div>
+        
+    </div>
+
+<!-- categories end -->
+
+<!-- newest publications -->
+<div class="row">
+    
+        <div class="col-lg-12">
+            <!-- title -->
+            <h5 class="trm-title-with-divider">
+                最近发布 
+                <span data-number="01"></span>
+            </h5>
+        </div>
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/19/8%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/">
+                    打工日记
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/19/8%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" class="trm-anima-link">
+                    8月份打工日记
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/19</li>
+                <li>19:54</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/13/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BB%A3%E7%90%86%E6%A8%A1%E5%BC%8F/" class="trm-anima-link">
+                    设计模式之代理模式
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/13</li>
+                <li>22:28</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%85%8D%E8%80%85%E6%A8%A1%E5%BC%8F/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/12/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E8%A3%85%E9%85%8D%E8%80%85%E6%A8%A1%E5%BC%8F/" class="trm-anima-link">
+                    设计模式之装饰模式
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/12</li>
+                <li>22:39</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99/" class="trm-anima-link">
+                    设计模式之依赖倒转原则
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/08</li>
+                <li>23:33</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%BC%80%E6%94%BE%E5%B0%81%E9%97%AD%E5%8E%9F%E5%88%99/" class="trm-anima-link">
+                    设计模式之开放封闭原则
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/07</li>
+                <li>23:15</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E6%A8%A1%E5%BC%8F/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/07/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E6%A8%A1%E5%BC%8F/" class="trm-anima-link">
+                    设计模式之单一职责模式
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/07</li>
+                <li>22:31</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/02/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" class="trm-anima-link">
+                    设计模式之简单工厂模式
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/02</li>
+                <li>15:26</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/08/01/7%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/">
+                    打工日记
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/08/01/7%E6%9C%88%E4%BB%BD%E6%89%93%E5%B7%A5%E6%97%A5%E8%AE%B0/" class="trm-anima-link">
+                    7月份打工日记
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/01</li>
+                <li>16:16</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" #.">
+                    未分类
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/07/31/%E5%B0%8F%E7%A8%8B%E5%BA%8FBUG%E8%AE%B0%E5%BD%95/" class="trm-anima-link">
+                    小程序BUG记录
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/07/31</li>
+                <li>21:09</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="col-lg-6">
+    <div class="trm-blog-card trm-scroll-animation">
+        <a href="/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/" class="trm-cover-frame trm-anima-link">
+            
+            
+                <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+            
+        </a>
+        
+        <div class="trm-card-descr">
+            <div class="trm-label trm-category trm-mb-20">
+                <a href=" /categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                    学习笔记
+                </a>
+            </div>
+            <h5>
+                <a href="/2024/07/31/%E5%BE%AE%E4%BF%A1SDK/" class="trm-anima-link">
+                    微信SDK
+                </a>
+            </h5>
+            <div class="trm-divider trm-mb-20 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/07/31</li>
+                <li>20:59</li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+</div>
+<!-- newest publications end -->
+
+
+    <div class="trm-pagination">
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a>
+    </div>
+
+
+                    <div class="trm-divider footer-divider"></div>
+
+                    <!-- footer -->
+                    <footer class="trm-footer-card trm-scroll-animation">
+
+    
+
+    
+
+    
+        <div class="trm-footer-item">
+            <span>
+                由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v7.3.0
+            </span>
+            <span class="footer-separator" data-separator=" | "></span>
+            <span> 
+                主题 - 
+                <a rel="noopener" href='https://github.com/MaLuns/hexo-theme-async' target='_blank'>Async</a>
+                v2.2.2
+            </span>
+        </div>
+      
+
+     
+
+     
+</footer>
+                    <!-- footer end -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            <!-- body end -->
+
+            
+
+            
+<div class="trm-fixed-container">
+    
+    
+    
+    <div id="trm-back-top" class="trm-fixed-btn" data-title="回到顶部">
+        <i class="iconfont fas fa-arrow-up"></i>
+    </div>
+</div>
+        </div>
+      </div>
+      <!-- scroll container end -->
+  </div>
+  <!-- app wrapper end -->
+
+  
+  <!-- Plugin -->
+
+
+
+
+    
+    
+<script src="https://unpkg.com/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    
+
+    
+
+    
+
+    <!-- 数学公式 -->
+    
+
+    <!-- 评论插件 -->
+    
+
+		
+
+
+
+
+    <!-- Service Worker -->
+    
+    <!-- baidu push -->
+    
+
+
+<script id="async-script" src="/js/main.js?v=2.2.2"></script>
+
+<!-- CDN -->
+
+
+    
+
+    
+
+    
+
+
+
+<!-- hexo injector body_end start -->
   <script data-pjax src="/js/hexo_githubcalendar.js"></script>
   <script data-pjax>
         function GithubCalendarConfig(){
@@ -230,4 +777,6 @@ public static Map&lt;String, String&gt; wxPay(String openid, HttpServletRequest 
         }
     </script>
     <style>#github_container{min-height:280px}@media screen and (max-width:650px) {#github_container{background-image:;min-height:0px}}</style>
-    <style></style><!-- hexo injector body_end end --></body></html>
+    <style></style><!-- hexo injector body_end end --></body>
+
+</html>
